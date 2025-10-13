@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Zap, TrendingUp, Code, Palette } from 'lucide-react';
 import { beezTechBlogPosts } from '../../components/Blogs/BeezTechBlogData';
 import Link from 'next/link';
-
+import Head from 'next/head';
 const categories = [
     { name: 'All', icon: Zap },
     { name: 'Product & Startup Insights', icon: TrendingUp },
