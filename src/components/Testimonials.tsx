@@ -1,0 +1,318 @@
+// components/TestimonialsSection.tsx
+'use client';
+import React, { useState, useEffect, useRef } from "react";
+import {
+    motion,
+    AnimatePresence,
+    useMotionValue,
+    useTransform,
+    animate,
+    useInView,
+} from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// --- 1. Interface Definitions ---
+
+interface Testimonial {
+    id: number;
+    quote: string;
+    author: string;
+    position: string;
+    image: string;
+}
+
+interface Stat {
+    number: string;
+    label: string;
+}
+
+interface AnimatedNumberProps {
+    value: string;
+    label: string;
+    delay?: number;
+}
+
+// --- 2. AnimatedNumber Component (Typed) ---
+
+// 💡 Use React.FC<Props> for functional components
+const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0 }) => {
+    // 💡 Explicitly type useRef for a div element
+    const ref = useRef<HTMLDivElement>(null); 
+    const isInView = useInView(ref, { once: true, amount: 0.5 }); 
+
+    // 💡 count is a MotionValue<number>
+    const count = useMotionValue(0);
+    // 💡 rounded is a MotionValue<string | number>
+    const rounded = useTransform(count, (latest: number) => {
+        if (value.includes("%")) {
+            return Math.round(latest) + "%";
+        } else if (value.includes("M")) {
+            return Math.round(latest) + "M";
+        } else if (value.includes("+")) {
+            return Math.round(latest) + "+";
+        }
+        return Math.round(latest);
+    });
+
+    // 💡 Explicitly parse the numeric part of the string
+    const numericValue: number = parseInt(value.replace(/[^\d]/g, "") || '0');
+
+    useEffect(() => {
+        if (isInView) { 
+            const controls = animate(count, numericValue, {
+                duration: 2,
+                delay: delay,
+                ease: "easeOut",
+            });
+            // 💡 Ensure cleanup function is correctly typed
+            return () => controls.stop();
+        }
+    }, [numericValue, delay, isInView, count]); 
+
+    return (
+        <div ref={ref} className="mb-8 sm:mb-12"> 
+            <motion.div
+                className="text-6xl sm:text-6xl lg:text-[60px] font-bold mb-2 sm:mb-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay }}
+            >
+                {/* rounded is a MotionValue, so it's a valid child of motion.span */}
+                {/* <motion.span>{rounded}</motion.span>  */}
+            </motion.div>
+            <motion.div
+                className="text-sm sm:text-base lg:text-[14px] text-white-300 font-light"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: (delay || 0) + 0.2 }} // Handle delay potentially being undefined
+            >
+                {label}
+            </motion.div>
+        </div>
+    );
+};
+
+
+// --- 3. TestimonialsSection Component (Typed) ---
+
+const TestimonialsSection: React.FC = () => {
+    // 💡 State for the current index, explicitly typed as number
+    const [currentIndex, setCurrentIndex] = useState<number>(0); 
+
+    // 💡 Apply the Testimonial interface
+    const testimonials: Testimonial[] = [
+        {
+            id: 1,
+            quote:
+                "Franklin turned our ideas into a sharp, clean brand. Fast, easy, and right on point.",
+            author: "Ethan Moore",
+            position: "Co-founder, NovaTech",
+            image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+        },
+        {
+            id: 2,
+            quote:
+                "Working with BeezTech was a game-changer. They delivered beyond our expectations with incredible attention to detail.",
+            author: "Sarah Johnson",
+            position: "CEO, TechVision",
+            image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+        },
+        {
+            id: 3,
+            quote:
+                "The team's creativity and professionalism transformed our digital presence completely. Highly recommend their services.",
+            author: "Michael Chen",
+            position: "Director, InnovateLab",
+            image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+        },
+    ];
+
+    // 💡 Apply the Stat interface
+    const stats: Stat[] = [
+        { number: "26+", label: "Finalized Projects" },
+        { number: "98%", label: "Client satisfaction rate" },
+        { number: "10M", label: "Gross Revenue" },
+    ];
+
+    // Auto-play testimonials
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev: number) => (prev + 1) % testimonials.length);
+        }, 5000); // Change every 5 seconds
+
+        return () => clearInterval(interval);
+    }, [testimonials.length]);
+
+    const nextTestimonial = () => {
+        setCurrentIndex((prev: number) => (prev + 1) % testimonials.length);
+    };
+
+    const prevTestimonial = () => {
+        setCurrentIndex(
+            (prev: number) => (prev - 1 + testimonials.length) % testimonials.length
+        );
+    };
+
+    return (
+        <div className=" py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-16 overflow-hidden bg-white z-60 relative">
+            <div className="max-w-7xl mx-auto space-y-6">
+                {/* Large Background Text and Heading */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    <span className="text-orange-500 font-semibold text-sm md:text-lg uppercase tracking-wider">
+                        Testimonials
+                    </span>
+                </motion.div>
+
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight"
+                >
+                    Why Brands Trust
+                </motion.h2>
+
+                <div className="relative z-10 mt-12 md:mt-16 lg:mt-18 max-w-7xl mx-auto">
+                    {/* Main Layout Grid */}
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-6">
+
+                        {/* Left Side - Stats Card */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="w-full md:h-[450px] lg:w-1/3 flex-shrink-0 bg-gradient-to-br from-gray-950 via-gray-950 to-black rounded-2xl sm:rounded-2xl text-white relative overflow-hidden"
+                        >
+
+                            {/* Background Pattern */}
+                            <div className="absolute inset-0 opacity-10">
+                                {/* 💡 In a real Next.js app, consider using the <Image> component here */}
+                                <img
+                                    src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026417/testimonial_yuuyjn.jpg"
+                                    alt="Background pattern"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            {/* Stats Content */}
+                            <div className="relative z-10 flex flex-col justify-center left-10 py-12 lg:py-8 h-full space-y-3 sm:space-y-4">
+                                {stats.map((stat, index) => (
+                                    <AnimatedNumber
+                                        key={index}
+                                        value={stat.number}
+                                        label={stat.label}
+                                        delay={index * 0.3}
+                                    />
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        {/* Right Side - Testimonial Slider */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="w-full lg:w-2/3 relative h-[450px] bg-black rounded-3xl sm:rounded-2xl overflow-hidden "
+                        >
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={currentIndex}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.6 }}
+                                    className="absolute inset-0"
+                                >
+                                    {/* Background Image and Content */}
+                                    <div className="absolute inset-0">
+                                        {/* 💡 In a real Next.js app, consider using the <Image> component here */}
+                                        <img
+                                            src={testimonials[currentIndex].image}
+                                            alt={testimonials[currentIndex].author}
+                                            className="w-full h-full object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+                                    </div>
+
+                                    <div className="relative z-10 h-full flex flex-col justify-between p-8 sm:p-10 lg:p-12 xl:p-14">
+                                        {/* Counter */}
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.3 }}
+                                            className="text-white/60 text-xs sm:text-sm font-medium tracking-wider"
+                                        >
+                                            {/* Use String() to ensure correct typing for padStart */}
+                                            {String(currentIndex + 1).padStart(2, "0")} /{" "}
+                                            {String(testimonials.length).padStart(2, "0")}
+                                        </motion.div>
+
+                                        {/* Quote and Author */}
+                                        <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+                                            <motion.blockquote
+                                                initial={{ opacity: 0, y: 30 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.8, delay: 0.4 }}
+                                                className="text-[15px] sm:text-3xl lg:text-4xl xl:text-[28px] font-bold text-white leading-tight"
+                                            >
+                                                "{testimonials[currentIndex].quote}"
+                                            </motion.blockquote>
+
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 0.6 }}
+                                                className="space-y-1"
+                                            >
+                                                <div className="text-lg sm:text-xl lg:text-[14px] font-semibold text-white">
+                                                    {testimonials[currentIndex].author}
+                                                </div>
+                                                <div className="text-sm sm:text-base lg:text-[14px] text-gray-300">
+                                                    {testimonials[currentIndex].position}
+                                                </div>
+                                            </motion.div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
+
+                            {/* Navigation Buttons */}
+                            <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 lg:bottom-10 lg:right-10 flex gap-2 sm:gap-3 z-20">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={prevTestimonial}
+                                    className="w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors border border-white/20"
+                                    aria-label="Previous testimonial"
+                                >
+                                    <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                                </motion.button>
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={nextTestimonial}
+                                    className="w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors border border-white/20"
+                                    aria-label="Next testimonial"
+                                >
+                                    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                                </motion.button>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default TestimonialsSection;
