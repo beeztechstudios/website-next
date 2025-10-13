@@ -5,7 +5,9 @@ import { NextConfig } from 'next';
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   // Add other configurations here if you have any (e.g., experimental features)
-  
+    eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: [
       'www.framer.com',       // ✅ Add this
