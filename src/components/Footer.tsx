@@ -144,7 +144,7 @@ const Footer: React.FC = () => {
                                 <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                                 <span>
                                     3v/1 Prabhat Nagar sec.5, <br />
-                                    **Udaipur**, Rajasthan, India
+                                    Udaipur, Rajasthan, India
                                 </span>
                             </li>
                             {/* Phone Number */}

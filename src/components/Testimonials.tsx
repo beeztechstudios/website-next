@@ -37,8 +37,8 @@ interface AnimatedNumberProps {
 // 💡 Use React.FC<Props> for functional components
 const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0 }) => {
     // 💡 Explicitly type useRef for a div element
-    const ref = useRef<HTMLDivElement>(null); 
-    const isInView = useInView(ref, { once: true, amount: 0.5 }); 
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true, amount: 0.5 });
 
     // 💡 count is a MotionValue<number>
     const count = useMotionValue(0);
@@ -58,7 +58,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
     const numericValue: number = parseInt(value.replace(/[^\d]/g, "") || '0');
 
     useEffect(() => {
-        if (isInView) { 
+        if (isInView) {
             const controls = animate(count, numericValue, {
                 duration: 2,
                 delay: delay,
@@ -67,10 +67,10 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
             // 💡 Ensure cleanup function is correctly typed
             return () => controls.stop();
         }
-    }, [numericValue, delay, isInView, count]); 
+    }, [numericValue, delay, isInView, count]);
 
     return (
-        <div ref={ref} className="mb-8 sm:mb-12"> 
+        <div ref={ref} className="mb-8 sm:mb-12">
             <motion.div
                 className="text-6xl sm:text-6xl lg:text-[60px] font-bold mb-2 sm:mb-3"
                 initial={{ opacity: 0, y: 20 }}
@@ -99,34 +99,43 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
 
 const TestimonialsSection: React.FC = () => {
     // 💡 State for the current index, explicitly typed as number
-    const [currentIndex, setCurrentIndex] = useState<number>(0); 
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
 
     // 💡 Apply the Testimonial interface
     const testimonials: Testimonial[] = [
         {
             id: 1,
             quote:
-                "Franklin turned our ideas into a sharp, clean brand. Fast, easy, and right on point.",
-            author: "Ethan Moore",
-            position: "Co-founder, NovaTech",
+                "The team understood our vision deeply and created a brand that feels both powerful and spiritual. Our new identity truly reflects who we are as an international law firm.",
+            author: "Founder, TARAKSH",
+            position: "TARAKSH International Law Firm",
             image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
         },
         {
             id: 2,
             quote:
-                "Working with BeezTech was a game-changer. They delivered beyond our expectations with incredible attention to detail.",
-            author: "Sarah Johnson",
-            position: "CEO, TechVision",
+                "From brand identity to website launch, everything was handled flawlessly. The result is a clean, modern presence that perfectly represents our legal HR platform.",
+            author: "CEO, HiLe",
+            position: "Hiring for Legal",
             image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
         },
         {
             id: 3,
             quote:
-                "The team's creativity and professionalism transformed our digital presence completely. Highly recommend their services.",
-            author: "Michael Chen",
-            position: "Director, InnovateLab",
+                "They transformed our business vision into a strong brand and a seamless digital experience. The identity and website truly capture our global mission of going beyond exporting.",
+            author: "Managing Director, Merchant Xporters",
+            position: "Merchant Xporters Pvt. Ltd.",
             image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
         },
+        {
+            id: 4,
+            quote:
+                "Our new branding and website perfectly reflect Alliedge’s innovation and reliability in the healthcare space. The creative and strategic approach made all the difference.",
+            author: "Head of Marketing, Alliedge Healthcare",
+            position: "Alliedge Healthcare Pvt. Ltd.",
+            image: "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+        },
+
     ];
 
     // 💡 Apply the Stat interface
