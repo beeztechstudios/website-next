@@ -118,11 +118,11 @@ const BeezTechBlogPage = () => {
                                 <div className="p-6 flex flex-col flex-grow">
                                     <p className="text-sm text-gray-500 mb-2">{post.date} · {post.readingTime}</p>
                                     <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors flex-grow">
-                                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                                        <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
                                     </h2>
                                     <p className="text-gray-600 line-clamp-2 mb-4">{post.excerpt}</p>
-                                    <Link 
-                                        href={`/blog/${post.slug}`}
+                                    <Link
+                                        href={`/blogs/${post.slug}`}
                                         className="mt-auto inline-flex items-center text-orange-500 font-semibold hover:text-orange-700 transition-colors"
                                     >
                                         Read More

@@ -98,7 +98,7 @@ export default function BlogDetailPage({ params }) {
       <div className="pt-24 pb-8 bg-gray-50 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            href="/blog"
+            href="/blogs"
             className="inline-flex items-center text-gray-600 hover:text-yellow-600 transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -163,7 +163,7 @@ export default function BlogDetailPage({ params }) {
               {relatedPosts.map(rPost => (
                 <Link
                   key={rPost.id}
-                  href={`/blog/${rPost.slug}`}
+                  href={`/blogs/${rPost.slug}`}
                   className="block p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
                   <p className="text-sm font-medium text-yellow-600 mb-1">{rPost.category}</p>
