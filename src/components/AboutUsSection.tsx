@@ -134,11 +134,11 @@ const AboutUsSection = () => {
               initial={{ opacity: 0, rotate: -45 }}
               whileInView={{ opacity: 1, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }}
               animate={{
                 rotate: [0, 360],
               }}
               transition={{
+                opacity: { duration: 0.8, delay: 0.6 },
                 rotate: {
                   duration: 20,
                   repeat: Infinity,
