@@ -331,6 +331,33 @@ const WebDevelopmentPage = () => {
 </Head>
 
     <div className="  min-h-screen mt-4">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Web & App Development",
+            "description": "Professional web and app development services including custom web applications, e-commerce platforms, mobile apps, and API development in Udaipur, Rajasthan.",
+            "provider": {
+              "@type": "Organization",
+              "name": "BeezTech Studio",
+              "url": "https://www.beeztech.studio"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Udaipur",
+              "containedIn": {
+                "@type": "State",
+                "name": "Rajasthan"
+              }
+            },
+            "serviceType": "Web Development, App Development, E-Commerce Development, Custom Software Development",
+            "url": "https://www.beeztech.studio/services/web-app-development"
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="bg-white  px-4 sm:px-6  text-gray-900 min-h-screen  flex items-center py-16 sm:py-24">
         <div className="max-w-7xl   mx-auto w-full">

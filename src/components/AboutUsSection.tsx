@@ -8,8 +8,12 @@ import Image from 'next/image'; // 2. Import next/image
 
 const AboutUsSection = () => {
   return (
-    <div className="relative py-8 sm:py-12 bg-white z-60 mb-1 md:mb-0 lg:py-20 ">
-      <div className="max-w-7xl mx-auto ">
+    <div className="relative py-8 sm:py-12 bg-gradient-to-b from-white via-orange-50/30 to-white z-60 mb-1 md:mb-0 lg:py-20 overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-10 right-10 w-72 h-72 bg-orange-200/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-yellow-200/20 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 px-4 sm:px-6 lg:gap-16 items-center">
           
           {/* Left Side - Visual Elements */}
@@ -20,9 +24,30 @@ const AboutUsSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative order-2 lg:order-1"
           >
-            {/* Decorative Background Elements */}
-            <div className="absolute top-0 left-0 w-32 h-32 border-2 border-orange-200 rounded-3xl -z-10"></div>
-            <div className="absolute -top-8 -left-8 w-20 h-20 bg-orange-100 rounded-full -z-20"></div>
+            {/* Enhanced Decorative Background Elements */}
+            <motion.div
+              animate={{
+                rotate: [0, 10, 0],
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute top-0 left-0 w-32 h-32 border-2 border-orange-300 rounded-3xl -z-10"
+            />
+            <motion.div
+              animate={{
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute -top-8 -left-8 w-20 h-20 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full -z-20"
+            />
             
             {/* Main Workspace Image */}
             <motion.div
@@ -30,34 +55,58 @@ const AboutUsSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative bg-gray-100 rounded-2xl overflow-hidden shadow-xl"
+              whileHover={{ scale: 1.02 }}
+              className="relative bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl overflow-hidden shadow-2xl ring-4 ring-orange-100/50"
             >
-              {/* 3. Replaced <img> with Next.js <Image> */}
               <Image
                 src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg"
-                alt="Modern workspace"
-                width={700} // Added required width
-                height={500} // Added required height
+                alt="BeezTech Studio Modern Creative Workspace"
+                width={700}
+                height={500}
                 className="w-full h-auto object-cover"
-                priority={true} // Consider setting priority if this is above the fold
+                priority={true}
               />
-              
-              {/* Floating Card (Content unchanged) */}
+
+              {/* Enhanced Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-orange-900/10 via-transparent to-transparent pointer-events-none" />
+
+              {/* Enhanced Floating Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl shadow-lg px-6 py-4 flex items-center gap-3"
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl shadow-2xl px-6 py-4 flex items-center gap-3 border border-orange-100"
               >
                 <div className="flex -space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-orange-400"></div>
-                  <div className="w-8 h-8 rounded-full bg-purple-400"></div>
-                  <div className="w-8 h-8 rounded-full bg-yellow-400"></div>
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                    className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 ring-2 ring-white"
+                  />
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                    className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-500 ring-2 ring-white"
+                  />
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                    className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 ring-2 ring-white"
+                  />
                 </div>
                 <div className="space-y-1">
-                  <div className="w-12 h-2 bg-orange-200 rounded-full"></div>
-                  <div className="w-16 h-2 bg-orange-200 rounded-full"></div>
+                  <motion.div
+                    animate={{ width: ["48px", "64px", "48px"] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                    className="h-2 bg-gradient-to-r from-orange-200 to-orange-300 rounded-full"
+                  />
+                  <motion.div
+                    animate={{ width: ["64px", "80px", "64px"] }}
+                    transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+                    className="h-2 bg-gradient-to-r from-orange-200 to-orange-300 rounded-full"
+                  />
                 </div>
               </motion.div>
             </motion.div>
@@ -68,26 +117,36 @@ const AboutUsSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -bottom-8 -left-8 w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-8 border-white shadow-xl bg-orange-400"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="absolute -bottom-8 -left-8 w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gradient-to-br from-orange-400 to-orange-500 ring-4 ring-orange-200/50"
             >
-              {/* 3. Replaced <img> with Next.js <Image> */}
               <Image
                 src="https://framerusercontent.com/images/EtyhVt5k6VdQGzImZKutvGH8I.png"
-                alt="Team member"
-                width={192} // 48 * 4 (sm:w-48, giving it enough width for quality)
-                height={192} // Added required height
+                alt="BeezTech Studio Team Member"
+                width={192}
+                height={192}
                 className="w-full h-full object-cover"
               />
             </motion.div>
 
-            {/* Decorative Element - Bottom Right (Content unchanged) */}
+            {/* Decorative Element - Bottom Right */}
             <motion.div
               initial={{ opacity: 0, rotate: -45 }}
               whileInView={{ opacity: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-orange-200 rounded-full -z-10"
-            ></motion.div>
+              animate={{
+                rotate: [0, 360],
+              }}
+              transition={{
+                rotate: {
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear"
+                }
+              }}
+              className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-orange-300 rounded-full -z-10"
+            />
           </motion.div>
 
           {/* Right Side - Content (Content unchanged) */}
@@ -152,15 +211,19 @@ const AboutUsSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="pt-4"
             >
-              {/* 4. Replaced react-router-dom Link with next/link */}
-              <Link href="/about" passHref> 
+              <Link href="/about">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(251, 146, 60, 0.3)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-black text-white font-bold px-8 py-4 rounded-lg flex items-center gap-2 hover:bg-gray-800 transition-colors duration-300 group"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:from-orange-600 hover:to-orange-700 transition-all duration-300 group shadow-lg"
                 >
                   <span>Know More</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </motion.div>
                 </motion.button>
               </Link>
             </motion.div>

@@ -28,7 +28,6 @@ const BeezTechBlogPage = () => {
 
     return (
         <>
-        import Head from "next/head";
 
 <Head>
   <title>Blogs – BeezTech IT, Branding & Digital Marketing Insights in Udaipur</title>

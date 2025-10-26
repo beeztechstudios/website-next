@@ -1,10 +1,10 @@
 // components/ServicesSectionHome.tsx
 'use client';
 import React, { useState, forwardRef, Ref } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ArrowRight, Check } from 'lucide-react';
-// 💡 Use Link from next/link for internal routing in Next.js
-import Link from 'next/link'; 
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { ChevronDown, ArrowRight, Check, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image'; 
 
 // --- TypeScript Interface Definitions ---
 
@@ -114,10 +114,11 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
     };
 
     return (
-        <div ref={ref} className="relative z-60 bg-black mt-0 text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
-            {/* Background Hexagonal Gradient Orbs */}
-            <div className="absolute top-20 left-10 w-32 h-32 sm:w-48 sm:h-48 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 blur-3xl rounded-full"
+        <div ref={ref} className="relative z-60 bg-gradient-to-br from-black via-gray-900 to-black mt-0 text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
+            {/* Enhanced Background Elements */}
+            <div className="absolute top-20 left-10 w-32 h-32 sm:w-48 sm:h-48 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 blur-3xl rounded-full animate-pulse"
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }} />
+            <div className="absolute bottom-20 right-10 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-br from-orange-500/15 to-yellow-400/15 blur-3xl rounded-full animate-pulse" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -131,13 +132,36 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                             transition={{ duration: 0.6 }}
                             className="mb-12"
                         >
-                            <p className="text-orange-500 font-semibold text-sm md:text-lg uppercase tracking-wider">
-                                Services
-                            </p>
-                            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="flex items-center gap-2 mb-4"
+                            >
+                                <Sparkles className="w-5 h-5 text-orange-500" />
+                                <p className="text-orange-500 font-semibold text-sm md:text-lg uppercase tracking-wider">
+                                    Our Services
+                                </p>
+                            </motion.div>
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight"
+                            >
                                 Expertise Solutions
-                            </h2>
-
+                            </motion.h2>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.4 }}
+                                className="mt-4 text-gray-400 text-lg"
+                            >
+                                Comprehensive digital solutions for modern businesses
+                            </motion.p>
                         </motion.div>
 
                         {/* Services List */}
@@ -153,26 +177,30 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                 >
                                     {/* Desktop View - Accordion */}
                                     <div className="hidden lg:block">
-                                        <button
+                                        <motion.button
                                             onClick={() => toggleService(index)}
                                             onMouseEnter={() => setHoveredService(index)}
-                                            className="w-full py-6 flex items-center justify-between group hover:bg-gradient-to-r hover:from-yellow-500/5 hover:to-orange-500/5 transition-all duration-300 px-4"
+                                            whileHover={{ x: 8 }}
+                                            className="w-full py-6 flex items-center justify-between group hover:bg-gradient-to-r hover:from-yellow-500/10 hover:to-orange-500/10 transition-all duration-300 px-4 rounded-xl border border-transparent hover:border-orange-500/20"
                                         >
                                             <div className="flex items-center gap-4">
-                                                <span className="text-yellow-400 text-2xl font-bold">
+                                                <motion.span
+                                                    whileHover={{ scale: 1.2, rotate: 5 }}
+                                                    className="text-yellow-400 text-2xl font-bold"
+                                                >
                                                     {service.id}.
-                                                </span>
+                                                </motion.span>
                                                 <span className="text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
                                                     {service.title}
                                                 </span>
                                             </div>
                                             <motion.div
                                                 animate={{ rotate: expandedService === index ? 180 : 0 }}
-                                                transition={{ duration: 0.3 }}
+                                                transition={{ duration: 0.3, type: "spring" }}
                                             >
                                                 <ChevronDown className="w-6 h-6 text-gray-400 group-hover:text-yellow-400 transition-colors" />
                                             </motion.div>
-                                        </button>
+                                        </motion.button>
 
                                         <AnimatePresence>
                                             {expandedService === index && (
@@ -232,45 +260,79 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                         className="hidden lg:flex items-center justify-center sticky top-24"
                     >
                         <div className="relative w-full max-w-sm">
-                            {/* Glow effect behind image */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/30 to-orange-500/30 blur-3xl rounded-3xl transform scale-110" />
+                            {/* Enhanced Glow effect behind image */}
+                            <motion.div
+                                animate={{
+                                    scale: [1, 1.1, 1],
+                                    opacity: [0.3, 0.5, 0.3],
+                                }}
+                                transition={{
+                                    duration: 4,
+                                    repeat: Infinity,
+                                    ease: "easeInOut"
+                                }}
+                                className="absolute inset-0 bg-gradient-to-br from-yellow-500/30 to-orange-500/30 blur-3xl rounded-3xl"
+                            />
 
-                            {/* Image Container with 3D tilt effect */}
+                            {/* Image Container with enhanced 3D tilt effect */}
                             <motion.div
                                 key={hoveredService}
-                                initial={{ opacity: 0, rotateY: -15, rotateX: 10 }}
+                                initial={{ opacity: 0, rotateY: -15, rotateX: 10, scale: 0.9 }}
                                 animate={{
                                     opacity: 1,
-                                    rotateY: 25,
-                                    rotateX: 8,
+                                    rotateY: 5,
+                                    rotateX: 5,
+                                    scale: 1,
                                 }}
-                                transition={{ duration: 0.6, ease: "easeOut" }}
-                                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                                transition={{ duration: 0.6, ease: "easeOut", type: "spring" }}
+                                whileHover={{
+                                    rotateY: 0,
+                                    rotateX: 0,
+                                    scale: 1.05,
+                                    transition: { duration: 0.3 }
+                                }}
+                                className="relative rounded-3xl overflow-hidden shadow-2xl ring-2 ring-orange-500/20"
                                 style={{
                                     transformStyle: 'preserve-3d',
                                     perspective: '1000px'
                                 }}
                             >
-                                {/* 💡 In a real Next.js app, consider using the <Image> component here */}
-                                <img
+                                <Image
                                     src={services[hoveredService].image}
-                                    alt={`${services[hoveredService].title} workspace`}
-                                    className="w-full h-auto rounded-2xl"
+                                    alt={`${services[hoveredService].title} - BeezTech Studio Service`}
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-auto rounded-3xl"
+                                    priority
                                 />
-                                {/* Overlay gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                                {/* Enhanced Overlay gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                                {/* Service Title Overlay */}
+                                <motion.div
+                                    initial={{ y: 20, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    className="absolute bottom-6 left-6 right-6"
+                                >
+                                    <h3 className="text-white text-2xl font-bold">
+                                        {services[hoveredService].title}
+                                    </h3>
+                                    <p className="text-gray-300 text-sm mt-2 line-clamp-2">
+                                        {services[hoveredService].description}
+                                    </p>
+                                </motion.div>
 
                                 {/* Animated border glow */}
                                 <motion.div
                                     animate={{
-                                        opacity: [0.5, 1, 0.5],
+                                        opacity: [0.3, 0.7, 0.3],
                                     }}
                                     transition={{
                                         duration: 2,
                                         repeat: Infinity,
                                         ease: "easeInOut"
                                     }}
-                                    className="absolute inset-0 rounded-2xl border-none border-yellow-500/30"
+                                    className="absolute inset-0 rounded-3xl border-2 border-yellow-500/40"
                                 />
                             </motion.div>
                         </div>

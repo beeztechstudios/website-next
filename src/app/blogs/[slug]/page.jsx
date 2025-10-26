@@ -9,10 +9,42 @@ const getRelatedPosts = (currentPostId, currentCategory) =>
     .filter(p => p.id !== currentPostId && p.category === currentCategory)
     .slice(0, 3);
 
-export const dynamic = 'force-dynamic';
-
+// Generate static params for all blog posts
 export async function generateStaticParams() {
   return beezTechBlogPosts.map(post => ({ slug: post.slug }));
+}
+
+// Generate metadata for SEO
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const post = beezTechBlogPosts.find(p => p.slug === slug);
+
+  if (!post) {
+    return {
+      title: 'Blog Not Found | BeezTech Studio',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  return {
+    title: `${post.title} | BeezTech Studio Blog`,
+    description: post.excerpt || post.title,
+    keywords: post.keywords.join(', '),
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || post.title,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+      url: `https://www.beeztech.studio/blogs/${slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt || post.title,
+    },
+  };
 }
 
 export default function BlogDetailPage({ params }) {
@@ -28,8 +60,41 @@ export default function BlogDetailPage({ params }) {
 
   const relatedPosts = getRelatedPosts(post.id, post.category);
 
+  // JSON-LD structured data for blog article
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BeezTech Studio",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.beeztech.studio/Logo_Black.png"
+      }
+    },
+    "description": post.excerpt || post.title,
+    "keywords": post.keywords.join(', '),
+    "articleSection": post.category,
+    "url": `https://www.beeztech.studio/blogs/${slug}`,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.beeztech.studio/blogs/${slug}`
+    }
+  };
+
   return (
     <div className="bg-white min-h-screen font-inter">
+      {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="pt-24 pb-8 bg-gray-50 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link

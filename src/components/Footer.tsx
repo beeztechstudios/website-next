@@ -1,8 +1,8 @@
 // components/layout/Footer.tsx
 'use client';
 import React from 'react';
-// 💡 Use Link from next/link for internal routing in Next.js
-import Link from 'next/link'; 
+import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube, LucideIcon } from 'lucide-react';
 
 // --- TypeScript Interface Definitions ---
@@ -38,7 +38,6 @@ const services: NavLink[] = [
     { name: 'Web & App Development', href: '/services/web-development' },
     { name: 'Branding & Identity', href: '/services/branding' },
     { name: 'Digital Marketing', href: '/services/digital-marketing' },
-    { name: 'SaaS Development', href: '/services/saas-development' }, // Changed path for clarity
 ];
 
 const socialLinks: SocialLink[] = [
@@ -66,12 +65,17 @@ const Footer: React.FC = () => {
                     
                     {/* Company Info */}
                     <div className="space-y-6">
-                        {/* Logo Space - Consider wrapping with Link to home */}
-                        <div className="mb-6">
-                            {/* In Next.js, use the Image component for optimized images */}
-                            <img className='w-58' src="/Logo_White.png" alt="BeezTech Logo" />
-                            <div className="w-16 h-1 bg-orange-500 mt-2"></div>
-                        </div>
+                        {/* Logo Space */}
+                        <Link href="/" className="block mb-6">
+                            <Image
+                                src="/Logo_White.png"
+                                alt="BeezTech Studio - Creative Digital Agency"
+                                width={200}
+                                height={60}
+                                className="w-52 h-auto"
+                            />
+                            <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mt-2 rounded-full"></div>
+                        </Link>
                         
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Buzzing ideas into reality. We design, build, and grow your digital presence with creativity and innovation.

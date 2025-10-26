@@ -450,11 +450,9 @@ const DigitalMarketingPage = () => {
                   variants={itemSlide}
                   className="text-4xl sm:text-5xl lg:text-6xl  font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
                 >
-                  <h1 className="text-4xl sm:text-6xl   md:text-[65px] font-extrabold leading-tight">
                     <span className="block">Grow Your  </span>
                     <span className="block">Business with </span>{" "}
                     <span className="block">Smart Marketing</span>
-                  </h1>
                 </motion.h1>
 
                 <motion.p

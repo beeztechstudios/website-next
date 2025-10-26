@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Menu, X, Phone } from 'lucide-react';
 // 💡 Use Link from next/link for internal routing in Next.js
-import Link from 'next/link'; 
+import Link from 'next/link';
+import Image from 'next/image'; 
 
 // --- TypeScript Interface Definition ---
 
@@ -131,7 +132,14 @@ export default function Navbar() {
                         {/* Logo */}
                         <div className="w-[120px] lg:w-[160px] ">
                             <Link href="/" onClick={() => setActiveLink('')}>
-                                <img src="/Logo_Black.png" alt="BeezTech Studio Logo" className="w-full" />
+                                <Image
+                                    src="/Logo_Black.png"
+                                    alt="BeezTech Studio - Creative Digital Agency in Udaipur"
+                                    width={160}
+                                    height={50}
+                                    className="w-full h-auto"
+                                    priority
+                                />
                             </Link>
                         </div>
 
@@ -180,12 +188,12 @@ export default function Navbar() {
                                                         }}
                                                         className="group flex items-center p-6 rounded-xl bg-white/70 hover:bg-orange-50 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-lg border border-transparent hover:border-orange-300"
                                                     >
-                                                        <div className="flex-shrink-0 w-1/4 pr-3">
-                                                            {/* In Next.js, consider using next/image here for better performance */}
-                                                            <img 
-                                                                src={service.image} 
-                                                                alt={service.title} 
-                                                                className='rounded-lg object-cover w-full h-full shadow-md' 
+                                                        <div className="flex-shrink-0 w-1/4 pr-3 relative h-20">
+                                                            <Image
+                                                                src={service.image}
+                                                                alt={`${service.title} - BeezTech Studio Services`}
+                                                                fill
+                                                                className='rounded-lg object-contain shadow-md'
                                                             />
                                                         </div>
                                                         <div className="flex-grow w-3/4">
@@ -223,7 +231,14 @@ export default function Navbar() {
                         {/* Logo */}
                         <div className="w-[140px]">
                             <Link href="/" onClick={() => setActiveLink('')}>
-                                <img src="/Logo_Black.png" alt="BeezTech Logo" className="w-full" />
+                                <Image
+                                    src="/Logo_Black.png"
+                                    alt="BeezTech Studio - Creative Digital Agency in Udaipur"
+                                    width={140}
+                                    height={45}
+                                    className="w-full h-auto"
+                                    priority
+                                />
                             </Link>
                         </div>
 
@@ -266,11 +281,12 @@ export default function Navbar() {
                                             className="block p-3 rounded-xl bg-orange-50 border border-orange-200 transition-shadow hover:shadow-md"
                                         >
                                             <div className="flex items-start gap-4">
-                                                <div className="text-3xl flex-shrink-0">
-                                                    <img 
-                                                        src={service.image} 
-                                                        alt={service.title} 
-                                                        className='rounded-lg object-cover w-16 h-full shadow-md' 
+                                                <div className="text-3xl flex-shrink-0 relative w-16 h-16">
+                                                    <Image
+                                                        src={service.image}
+                                                        alt={`${service.title} - BeezTech Studio Services`}
+                                                        fill
+                                                        className='rounded-lg object-contain shadow-md'
                                                     />
                                                 </div>
                                                 <div>
