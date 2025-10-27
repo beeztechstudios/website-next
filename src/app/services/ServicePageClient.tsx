@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import ContactSection from '@/components/ContactSection';
 
+
 // Service data
 const services = [
   {
@@ -110,7 +111,7 @@ const services = [
   },
 ];
 
-export default function ServicesPage() {
+export default function ServicesPageclient() {
   const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   return (

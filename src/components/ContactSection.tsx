@@ -664,7 +664,7 @@ const ContactSection: React.FC = () => { // 💡 Component function type definit
                             >
                                 {[...Array(3)].map((_, setIndex) => (
                                     <React.Fragment key={setIndex}>
-                                        <span className="text-xl font-pilogue font-extrabold sm:text-4xl md:text-[35px] opacity-40">
+                                        <span className="text-xl sm:text-4xl md:text-[25px] font-pilogue font-bold">
                                             hello@beeztech.studio
                                         </span>
                                         <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="Asterisk Separator" className=" h-4 md:h-8"></img>

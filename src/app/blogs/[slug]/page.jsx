@@ -15,6 +15,7 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
+// ✅ Generate metadata for each blog post
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const post = beezTechBlogPosts.find(p => p.slug === slug);
@@ -23,29 +24,56 @@ export async function generateMetadata({ params }) {
     return {
       title: 'Blog Not Found | BeezTech Studio',
       description: 'The requested blog post could not be found.',
+      robots: { index: false, follow: false },
     };
   }
+
+  const fullUrl = `https://www.beeztech.studio/blogs/${slug}`;
+  // const ogImage = post.image || 'https://www.beeztech.studio/images/og-blogs.png';
 
   return {
     title: `${post.title} | BeezTech Studio Blog`,
     description: post.excerpt || post.title,
-    keywords: post.keywords.join(', '),
-    authors: [{ name: post.author }],
+    keywords: post.keywords?.join(', ') || 'BeezTech Studio Blog, branding, design, marketing, Udaipur',
+    authors: [{ name: post.author || 'BeezTech Studio' }],
     openGraph: {
-      title: post.title,
+      title: `${post.title} | BeezTech Studio Blog`,
       description: post.excerpt || post.title,
       type: 'article',
+      url: fullUrl,
+      siteName: 'BeezTech Studio',
       publishedTime: post.date,
+      modifiedTime: post.updatedAt || post.date,
       authors: [post.author],
-      url: `https://www.beeztech.studio/blogs/${slug}`,
+      // images: [
+      //   {
+      //     url: ogImage,
+      //     width: 1200,
+      //     height: 630,
+      //     alt: `${post.title} - BeezTech Studio Blog`,
+      //   },
+      // ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: `${post.title} | BeezTech Studio Blog`,
       description: post.excerpt || post.title,
+      // images: [ogImage],
+      creator: '@beeztechstudio',
+    },
+    alternates: {
+      canonical: fullUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     },
   };
 }
+
 
 export default function BlogDetailPage({ params }) {
   const { slug } = params;
@@ -62,31 +90,36 @@ export default function BlogDetailPage({ params }) {
 
   // JSON-LD structured data for blog article
   const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "datePublished": post.date,
-    "author": {
-      "@type": "Person",
-      "name": post.author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "BeezTech Studio",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.beeztech.studio/Logo_Black.png"
-      }
-    },
-    "description": post.excerpt || post.title,
-    "keywords": post.keywords.join(', '),
-    "articleSection": post.category,
-    "url": `https://www.beeztech.studio/blogs/${slug}`,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://www.beeztech.studio/blogs/${slug}`
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "image": post.image || "https://www.beeztech.studio/images/og-blogs.png",
+  "datePublished": post.date,
+  "dateModified": post.updatedAt || post.date,
+  "author": {
+    "@type": "Person",
+    "name": post.author || "BeezTech Studio",
+    "url": "https://www.beeztech.studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BeezTech Studio",
+    "url": "https://www.beeztech.studio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.beeztech.studio/Logo_Black.png"
     }
-  };
+  },
+  "description": post.excerpt || post.title,
+  "keywords": post.keywords.join(', '),
+  "articleSection": post.category,
+  "url": `https://www.beeztech.studio/blogs/${slug}`,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://www.beeztech.studio/blogs/${slug}`
+  }
+};
+
 
   return (
     <div className="bg-white min-h-screen font-inter">
