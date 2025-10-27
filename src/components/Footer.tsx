@@ -30,7 +30,7 @@ const quickLinks: NavLink[] = [
     { name: 'Services', href: '/services' }, 
     { name: 'Portfolio', href: '/works' },
     // Incorporating a long-tail keyword 'book pet service appointment' (as an example)
-    { name: 'Contact / Book a Call', href: '/book-call' } 
+    { name: 'Book-Call', href: '/book-call' } 
 ];
 
 const services: NavLink[] = [
@@ -42,9 +42,9 @@ const services: NavLink[] = [
 
 const socialLinks: SocialLink[] = [
     // { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
+    // { name: 'Twitter', icon: Twitter, href: 'https://x.com/BeezTechStudio' },
+    // { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/beeztech/' },
+    // { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/beeztech' },
     // { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' }
 ];
 
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                         </Link>
                         
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Buzzing ideas into reality. We design, build, and grow your digital presence with creativity and innovation.
+                            Designing, building, and branding digital experiences that inspire
                         </p>
                         
                         {/* Social Media Links */}
@@ -147,7 +147,7 @@ const Footer: React.FC = () => {
                             <li className="flex items-start gap-3 text-gray-400 text-sm">
                                 <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                                 <span>
-                                    3v/1 Prabhat Nagar sec.5, <br />
+                                    
                                     Udaipur, Rajasthan, India
                                 </span>
                             </li>
@@ -186,12 +186,8 @@ const Footer: React.FC = () => {
                                 Privacy Policy
                             
                         </Link>
-                        <span className="text-gray-600">|</span>
-                        <Link href="/terms-of-service" className="hover:text-orange-500 transition-colors" >
-                             
-                                Terms of Service
-                            
-                        </Link>
+                       
+                        
                     </div>
                 </div>
             </div>

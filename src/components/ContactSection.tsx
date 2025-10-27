@@ -590,7 +590,7 @@ const BookACallFormContent: React.FC = () => {
 // --- Main Exported Component ---
 const ContactSection: React.FC = () => { // 💡 Component function type definition
     return (
-        <div className="relative bg-white py-20 sm:py-24 lg:py-32 px-2 sm:px-6 lg:px-6 overflow-hidden">
+        <div className="relative bg-white py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-6 overflow-hidden">
             {/* Large Background Text */}
             <div className="absolute top-6 md:-top-12 left-0 right-0 overflow-hidden pointer-events-none">
                 <h2 className="text-[55px] text-center sm:text-[180px] lg:text-[170px] font-bold text-gray-300 whitespace-nowrap opacity-40 select-none">

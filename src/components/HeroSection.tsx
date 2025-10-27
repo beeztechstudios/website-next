@@ -22,8 +22,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
    
 
     return (
-        <div className="relative z-10 px-4 sm:px-6 lg:px-16 py-12 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <div className="relative z-0 px-4 sm:px-6 lg:px-16 py-8 overflow-hidden">
+            <div className="fixed inset-0 opacity-15 pointer-events-none ">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%23ff8800' stroke-width='1'/%3E%3C/svg%3E")`,
+              backgroundSize: "60px 60px",
+            }}
+          ></div>
+        </div>
+            <div className="max-w-7xl mx-auto z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -31,11 +40,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
                         transition={{ duration: 0.8 }}
                         className="space-y-4 sm:space-y-5 w-full lg:w-1/2 text-left lg:text-left order-2 lg:order-1 "
                     >
-                        <div className="mt-2 lg:mt-10">
-                            <h3 className="font-fira-sans font-medium text-lg sm:text-base tracking-widest uppercase">
-                                BUZZING IDEAS INTO REALITY
-                            </h3>
-                        </div>
+                       <motion.div
+                                       
+                                       className="inline-flex items-center gap-2 bg-black text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium"
+                                     >
+                                       <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse "></div>
+                                       BUZZING IDEAS INTO REALITY
+                                     </motion.div>
 
                         {/* Main Heading - Highly Responsive text sizes */}
                         <motion.div
@@ -44,10 +55,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
                             transition={{ delay: 0.3 }}
                             className="space-y-2 sm:space-y-4"
                         >
-                            <h1 className="text-4xl sm:text-6xl md:text-[65px] font-pilogue font-extrabold leading-tight">
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight">
                                 <span className="block">We Design,</span>
                                 <span className="block">Build And Grow</span>{" "}
-                                <span className="block">Digital Presence.</span>
+                                <span className="block">Your Digital Brand </span>
                             </h1>
                         </motion.div>
 
@@ -58,8 +69,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
                             transition={{ delay: 0.4 }}
                             className="text-base sm:text-lg lg:text-xl text-gray-600 font-pilogue font-medium leading-relaxed max-w-lg mx-auto lg:mx-0"
                         >
-                            From branding to media, marketing to development — we’re your
-                            all-in-one creative hive.
+                            From branding & design to web development and marketing BeezTech is your all-in-one creative digital agency in Udaipur. 
+                            
                         </motion.p>
 
                         {/* Buttons */}
@@ -90,7 +101,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
                         </motion.div>
                         
                         {/* Testimonials/Stats Block */}
-                        <motion.div
+                        {/* <motion.div
                             className="flex items-center gap-4 pt-4"
                         >
                             <div className="flex -space-x-3">
@@ -117,7 +128,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
                                     Trusted By 50+ Businesses
                                 </span>
                             </div>
-                        </motion.div>
+                        </motion.div> */}
                     </motion.div>
 
                     <div className="w-full lg:w-1/2 flex justify-center items-center pt-8 lg:pt-0 order-1 lg:order-2">

@@ -368,7 +368,7 @@ const DigitalMarketingPage = () => {
   return (
     <>
       
-      <div className="bg-white mt-4  min-h-screen ">
+      <div className="bg-white mt-8 md:mt-0 min-h-screen ">
         {/* Hero Section */}
 
         <section className="bg-[white] px-4 sm:px-6 text-gray-900 min-h-screen flex items-center py-16 sm:py-24">
@@ -403,8 +403,7 @@ const DigitalMarketingPage = () => {
                   variants={itemSlide}
                   className="text-normal sm:text-xl text-gray-600 max-w-xl"
                 >
-                  We help brands reach their full potential through data-driven
-                  digital marketing strategies that deliver measurable results.
+                 From SEO and performance ads to social media and content marketing, BeezTech help your business achieve measurable growth across every channel.
                 </motion.p>
 
                 {/* Buttons: Wrap when needed on small screens */}
@@ -424,7 +423,7 @@ const DigitalMarketingPage = () => {
                 </motion.div>
 
                 {/* Testimonials/Stats Block */}
-                <motion.div
+                {/* <motion.div
                   variants={itemSlide}
                   className="flex items-center gap-4 pt-4"
                 >
@@ -452,7 +451,7 @@ const DigitalMarketingPage = () => {
                       Trusted By 50+ Businesses
                     </span>
                   </div>
-                </motion.div>
+                </motion.div> */}
               </div>
 
               {/* Right Side (Image Grid with Staggered Pop-In) */}

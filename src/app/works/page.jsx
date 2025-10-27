@@ -12,10 +12,10 @@ const HeroSection = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="max-w-7xl mx-auto pt-32 md:pt-40 lg:pt-48 mb-12 relative overflow-hidden"
+      className="max-w-7xl mx-auto pt-16 md:pt-32 lg:pt-20 mb-12 relative overflow-hidden"
     >
       {/* Rotating Logo Circle */}
-      <div className="absolute top-64 md:top-52 right-12 w-24 h-24 sm:w-48 sm:h-48 z-10">
+      <div className="absolute top-64 md:top-52 right-12 w-0 h-0 sm:w-48 sm:h-48 z-10">
         <div className="relative w-full h-full">
           <div className="absolute inset-0 animate-spin-slow">
             <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -49,12 +49,12 @@ const HeroSection = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-orange-500 font-medium text-xl md:text-[24px] uppercase tracking-wider mb-2 border-b border-white/20 inline-block pb-1"
+        className="text-orange-500 font-medium text-sm md:text-lg uppercase tracking-wider mb-2 inline-block pb-1"
       >
         Case Studies
       </motion.p>
 
-      <h1 className="text-7xl sm:text-8xl lg:text-[120px] font-bold text-white leading-none mt-4 uppercase">
+      <h1 className="text-5xl sm:text-5xl lg:text-[120px] font-bold text-white leading-none mt-4 uppercase">
         <motion.span
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const PortfolioPage = () => {
       id: 1,
       title: "TARAKSH",
       category: "Brand Identity",
-      image: "https://i.imgur.com/HhNZPOo.jpeg",
+      image: "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583136/taraksh_yoxxzb.jpg",
       challenge:
         "TARAKSH, an international law firm operating in Dubai and India, wanted to establish a timeless brand identity that reflected both their professional excellence and deep-rooted spiritual values. They needed a cohesive system that could translate their ethos into every brand touchpoint—from logo to stationery and digital presence.",
       solution:
@@ -122,7 +122,7 @@ const PortfolioPage = () => {
       id: 2,
       title: "HiLe",
       category: "Brand Identity & Development",
-      image: "https://i.imgur.com/eKWRRfS.png",
+      image: "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583165/hile_ry2wdg.png",
       challenge:
         "HiLe, a tech-driven HR platform for the legal industry, needed a complete brand and digital presence to establish trust and communicate innovation. The goal was to create a distinct identity and seamless digital experience that would connect law firms with the right talent efficiently.",
       solution:
@@ -138,7 +138,7 @@ const PortfolioPage = () => {
       id: 3,
       title: "Merchant Xporters",
       category: "Brand Identity & Web Development",
-      image: "https://i.imgur.com/sToaOF2.jpeg",
+      image: "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583148/mercentexporter_geekok.jpg",
       challenge:
         "Merchant Xporters, a global export company, needed a strong brand identity and an impactful digital presence to represent their international operations. The challenge was to create a visual language and website that communicates reliability, growth, and global connectivity.",
       solution:
@@ -154,7 +154,7 @@ const PortfolioPage = () => {
       id: 4,
       title: "Alliedge Healthcare",
       category: "Brand Identity & Web Design",
-      image: "https://i.imgur.com/FEvEqr3.png",
+      image: "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583130/alliedge_k4s1mq.png",
       challenge:
         "Alliedge Healthcare, India’s leading SaaS-based medical software provider, needed a modern and trustworthy brand identity that would reflect innovation, care, and reliability in the healthcare technology space. The challenge was to balance a professional tech-driven aesthetic with a human, approachable feel.",
       solution:

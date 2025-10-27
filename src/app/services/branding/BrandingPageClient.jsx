@@ -129,7 +129,7 @@ const BrandingPageClient = () => {
     <>
       
 
-      <div className="bg-white min-h-screen mt-4">
+      <div className="bg-white min-h-screen mt-8 md:mt-0">
         {/* --- Hero Section --- */}
         <section className="px-4 sm:px-6 text-gray-900 min-h-screen flex items-center py-16 sm:py-28">
           <div className="max-w-7xl mx-auto w-full">
@@ -149,18 +149,18 @@ const BrandingPageClient = () => {
                   BRANDING SERVICES
                 </motion.div>
                 <motion.h1
-                  variants={itemSlide}
-                  className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
-                >
-                  Transform Your Idea{" "}
-                  <span className="text-black">Into Iconic Brand</span>
-                </motion.h1>
+                                variants={itemSlide}
+                                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
+                              >
+                                  <span className="block">Transform Your </span>
+                                  <span className="block">Idea into an </span>{" "}
+                                  <span className="block">Brand Identity</span>
+                              </motion.h1>
                 <motion.p
                   variants={itemSlide}
                   className="text-base sm:text-xl text-gray-600 max-w-xl"
                 >
-                  Our goal is simple: create web solutions that not only look
-                  stunning but also drive measurable results for your business.
+                  From logo design and brand strategy to visual identity and storytelling, BeezTech craft distinctive brand experiences that connect emotionally and perform powerfully 
                 </motion.p>
                 <motion.div
                   variants={itemSlide}
@@ -265,25 +265,17 @@ const BrandingPageClient = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Launch your New Brand or Transform your existing Branding – With
-                Us...
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 ">
+                Launch a New Brand or Transform Your Existing Identity — with BeezTech.
               </h2>
               <p className="text-gray-300 text-base md:text-xl mb-4">
-                Whether you’re introducing your product or service into a
-                competitive market or planning a complete branding revamp, our
-                digital branding services are the perfect solution to your
-                worries.
+                Whether you’re entering a competitive market or planning a complete rebranding, BeezTech delivers end-to-end digital branding services that help your business stand out and scale.
               </p>
               <p className="text-gray-300 text-base md:text-xl mb-4">
-                The key idea is to present a memorable visual identity and for
-                that, we thoroughly analyze your brand requirements and
-                objectives – combined into a robust brand strategy.
+                We create memorable brand identities through research-driven brand strategy, logo design, and visual storytelling — ensuring your message resonates with the right audience.
               </p>
               <p className="text-gray-300 text-base md:text-xl">
-                While working on the strategy, we collaborate with you to
-                conceptualize your brand launch campaign and launch/optimize
-                your existing brand activations.
+               Our team collaborates closely with you to plan and execute brand launches, refresh existing identities, and optimize brand activations for long-term recognition and growth — both online and offline.
               </p>
             </motion.div>
 

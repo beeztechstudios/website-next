@@ -90,22 +90,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                 'Creative direction and content planning for marketing campaigns'
             ]
         },
-        {
-            id: 5,
-            title: 'SaaS Development',
-            link: '/services/web-app-development',
-            image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026416/saas_service_logo_argw77.png',
-            description:
-                'We build robust SaaS products from concept to launch — scalable, secure, and user-friendly platforms for modern businesses.',
-            details: [
-                'End-to-end SaaS product development — design, development, and deployment',
-                'MVP (Minimum Viable Product) creation to validate startup ideas',
-                'Subscription and user management systems',
-                'Integration with cloud and payment gateways (AWS, Firebase, Stripe, Razorpay)',
-                'Analytics, monitoring, and performance scaling solutions',
-                'White-labeling and multi-tenant architecture setup'
-            ]
-        }
+        
     ];
 
 
@@ -114,7 +99,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
     };
 
     return (
-        <div ref={ref} className="relative z-60 bg-gradient-to-br from-black via-gray-900 to-black mt-0 text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
+        <div ref={ref} className="relative z-60 bg-gradient-to-br from-black via-gray-950 to-black mt-0 text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
             {/* Enhanced Background Elements */}
             <div className="absolute top-20 left-10 w-32 h-32 sm:w-48 sm:h-48 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 blur-3xl rounded-full animate-pulse"
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }} />
@@ -139,7 +124,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                 transition={{ duration: 0.5 }}
                                 className="flex items-center gap-2 mb-4"
                             >
-                                <Sparkles className="w-5 h-5 text-orange-500" />
+                                
                                 <p className="text-orange-500 font-semibold text-sm md:text-lg uppercase tracking-wider">
                                     Our Services
                                 </p>
@@ -158,9 +143,9 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.4 }}
-                                className="mt-4 text-gray-400 text-lg"
+                                className=" mt-4 text-base sm:text-lg lg:text-xl text-gray-400 font-pilogue font-medium leading-relaxed max-w-xl mx-auto lg:mx-0"
                             >
-                                Comprehensive digital solutions for modern businesses
+                                BeezTech  provide end-to-end digital solutions to  businesses across India and overseas build strong brands and scalable digital experiences.
                             </motion.p>
                         </motion.div>
 
@@ -237,7 +222,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                         className="lg:hidden w-full py-5 flex items-center justify-between group active:bg-gradient-to-r active:from-yellow-500/10 active:to-orange-500/10 transition-all duration-200 px-2"
                                     >
                                         <div className="flex items-center gap-3">
-                                            <span className="text-yellow-400 text-xl font-bold">
+                                            <span className="text-orange-500 text-xl font-bold">
                                                 {service.id}.
                                             </span>
                                             <span className="text-lg font-bold tracking-wider text-white">
@@ -291,7 +276,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                     scale: 1.05,
                                     transition: { duration: 0.3 }
                                 }}
-                                className="relative rounded-3xl overflow-hidden shadow-2xl ring-2 ring-orange-500/20"
+                                className="relative rounded-3xl overflow-hidden shadow-2xl"
                                 style={{
                                     transformStyle: 'preserve-3d',
                                     perspective: '1000px'
@@ -308,32 +293,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                 {/* Enhanced Overlay gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                                {/* Service Title Overlay */}
-                                <motion.div
-                                    initial={{ y: 20, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    className="absolute bottom-6 left-6 right-6"
-                                >
-                                    <h3 className="text-white text-2xl font-bold">
-                                        {services[hoveredService].title}
-                                    </h3>
-                                    <p className="text-gray-300 text-sm mt-2 line-clamp-2">
-                                        {services[hoveredService].description}
-                                    </p>
-                                </motion.div>
-
-                                {/* Animated border glow */}
-                                <motion.div
-                                    animate={{
-                                        opacity: [0.3, 0.7, 0.3],
-                                    }}
-                                    transition={{
-                                        duration: 2,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                    className="absolute inset-0 rounded-3xl border-2 border-yellow-500/40"
-                                />
+                               
                             </motion.div>
                         </div>
                     </motion.div>

@@ -20,7 +20,7 @@ export default function HomePageClient() {
   };
 
   return (
-    <div className="w-screen mt-4 bg-white text-gray-900">
+    <div className="w-screen mt-0 md:mt-18 bg-white text-gray-900">
       <HeroSection scrollToServices={scrollToServices} />
       <Slider />
       <AboutUsSection />

@@ -35,6 +35,8 @@ interface AnimatedNumberProps {
 // --- 2. AnimatedNumber Component (Typed) ---
 
 // 💡 Use React.FC<Props> for functional components
+// --- 2. AnimatedNumber Component (Typed) ---
+
 const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0 }) => {
     // 💡 Explicitly type useRef for a div element
     const ref = useRef<HTMLDivElement>(null);
@@ -49,7 +51,9 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
         } else if (value.includes("M")) {
             return Math.round(latest) + "M";
         } else if (value.includes("+")) {
-            return Math.round(latest) + "+";
+            // CRITICAL FIX: Ensure the '+' sign is appended only when needed
+            // The numericValue parsing above strips it, so we add it back here.
+            return Math.round(latest) + "+"; 
         }
         return Math.round(latest);
     });
@@ -78,8 +82,8 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay }}
             >
-                {/* rounded is a MotionValue, so it's a valid child of motion.span */}
-                {/* <motion.span>{rounded}</motion.span>  */}
+                {/* 🐞 FIX: UNCOMMENTED and placed the motion.span to display the value */}
+                <motion.span>{rounded}</motion.span>
             </motion.div>
             <motion.div
                 className="text-sm sm:text-base lg:text-[14px] text-white-300 font-light"
@@ -186,7 +190,7 @@ const TestimonialsSection: React.FC = () => {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight"
                 >
-                    Why Brands Trust
+                    Why Brands Trust 
                 </motion.h2>
 
                 <div className="relative z-10 mt-12 md:mt-16 lg:mt-18 max-w-7xl mx-auto">
@@ -204,13 +208,13 @@ const TestimonialsSection: React.FC = () => {
 
                             {/* Background Pattern */}
                             <div className="absolute inset-0 opacity-10">
-                                {/* 💡 In a real Next.js app, consider using the <Image> component here */}
+                               
                                 <img
                                     src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026417/testimonial_yuuyjn.jpg"
                                     alt="Background pattern"
                                     className="w-full h-full object-cover"
                                 />
-                            </div>
+                            </div> 
 
                             {/* Stats Content */}
                             <div className="relative z-10 flex flex-col justify-center left-10 py-12 lg:py-8 h-full space-y-3 sm:space-y-4">

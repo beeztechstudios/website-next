@@ -34,7 +34,7 @@ const steps: Step[] = [ // 💡 Apply the Step interface to the array
         title: null,
         description: null,
         type: 'image-card',
-        image: '/workflow_1.jpeg',
+        image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1761584555/workflow_1_uhfyib.jpg',
     },
     {
         number: '02.',
@@ -49,7 +49,7 @@ const steps: Step[] = [ // 💡 Apply the Step interface to the array
         title: null,
         description: null,
         type: 'image-card',
-        image: '/workflow_2.jpeg',
+        image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1761584556/workflow_2_p9aokv.jpg',
     },
     {
         number: '03.',
@@ -82,7 +82,7 @@ const steps: Step[] = [ // 💡 Apply the Step interface to the array
         title: null,
         description: null,
         type: 'image-card',
-        image: '/workflow_3.jpeg',
+        image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1761584556/workflow_3_e3gijx.jpg',
     },
 ];
 
@@ -143,7 +143,7 @@ const DesignProcessSection: React.FC = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     className="mb-16 sm:mb-20 text-center lg:text-left"
                 >
                     {/* Changed text color to gray-900 */}
@@ -185,14 +185,13 @@ const DesignProcessSection: React.FC = () => {
                                 key={index}
                                 variants={itemVariants}
                                 className={`
-                                    relative p-8 sm:p-10 shadow-xl rounded-3xl flex flex-col justify-between 
+                                    relative p-8 sm:p-10 shadow-xl rounded-3xl flex flex-col justify-center 
                                     transition-all duration-300
                                     ${isImage ? 'overflow-hidden bg-gray-700' : styles.wrapper} 
                                     ${layoutClasses}
                                 `}
                                 // Ensure all cards have a square aspect ratio
-                                style={{ aspectRatio: '1/1' }} 
-                            >
+                                                            >
                                 {isImage ? (
                                     step.image && (
                                         <img 

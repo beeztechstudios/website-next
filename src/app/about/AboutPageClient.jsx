@@ -41,7 +41,7 @@ const AboutPageClient = () => {
   return (
     <>
     
-    <div className="bg-white">
+    <div className="bg-white mt-10 md:mt-0">
       {/* Honeycomb Background Pattern */}
       <div className="fixed inset-0 opacity-15 pointer-events-none">
         <div className="absolute inset-0" style={{
@@ -60,7 +60,7 @@ const AboutPageClient = () => {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  transition={{ duration: 0.0, ease: "easeOut" }}
                   className="relative order-2 lg:order-1"
                 >
                   {/* Decorative Background Elements */}
@@ -72,7 +72,7 @@ const AboutPageClient = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    transition={{ duration: 0.4, delay: 0.0 }}
                     className="relative bg-gray-100 rounded-2xl overflow-hidden shadow-xl"
                   >
                     <img
@@ -154,7 +154,7 @@ const AboutPageClient = () => {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
                   >
-                    Buzzing Ideas into Digital Reality 🐝
+                   Buzzing Ideas into Digital Reality
                   </motion.h2>
       
                   {/* Subheading */}
@@ -165,7 +165,7 @@ const AboutPageClient = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-lg sm:text-xl text-gray-600 leading-relaxed"
                   >
-                    We're a creative tech agency helping brands design, develop, and grow with innovation and purpose.
+                    We’re a creative tech agency turning bold ideas into powerful digital experiences that inspire, engage, and grow brands
                   </motion.p>
       
                   {/* Description */}
@@ -177,7 +177,10 @@ const AboutPageClient = () => {
                     className="text-base text-gray-500 leading-relaxed"
                   >
                     
-                    From startups to established businesses, we help transform your ideas into stunning digital experiences — combining creativity, code, and strategy under one roof.
+                    At BeezTech, we blend creativity, technology, and strategy to craft digital solutions that stand out. From startups to enterprises, our team helps transform concepts into impactful brands — through design, development, and digital innovation.
+
+
+
                   </motion.p>
       
                   {/* Button */}
@@ -205,20 +208,8 @@ const AboutPageClient = () => {
 
       {/* Our Story Section */}
       <section className="relative py-0   px-4 sm:px-6 lg:px-16 bg-transparent">
-        <div className="max-w-5xl mx-auto">
-          {/* <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-              Our Journey
-            </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 mx-auto rounded-full"></div>
-          </motion.div> */}
+        <div className="max-w-6xl mx-auto">
+         
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,11 +218,11 @@ const AboutPageClient = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white rounded-3xl shadow-xl p-8 sm:p-12 lg:p-16 border border-gray-100"
           >
-            <div className="space-y-6 text-left max-w-3xl mx-auto">
+            <div className="space-y-6 text-left max-w-4xl mx-auto">
               <p className="text-xl sm:text-2xl text-gray-800 leading-relaxed font-light">
-                Beeztech started with one simple belief — that every brand deserves to{' '}
-                <span className="text-orange-500 font-semibold relative inline-block">
-                  stand out and succeed online
+                BeezTech was born from a simple yet powerful idea — just like a hive built by tiny bees, creativity and collaboration can{" "}
+                <span className="text-orange-500 font-semibold relative ">
+                   build something extraordinary
                   <svg className="absolute -bottom-1 left-0 w-full" height="3" viewBox="0 0 100 3" preserveAspectRatio="none">
                     <path d="M0,2 Q25,0 50,2 T100,2" stroke="currentColor" strokeWidth="2" fill="none" className="text-orange-300"/>
                   </svg>
@@ -240,12 +231,15 @@ const AboutPageClient = () => {
               </p>
               
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                What began as a small creative team has now grown into a full-service digital agency offering everything from web & app development to branding, media, and SaaS solutions.
+                What started as a small initiative now evolved into a full-fledged digital studio driven by innovation, design, and purpose. At BeezTech, we believe every brand, no matter its size, deserves to stand out and thrive in the digital world.
+              </p>
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+                Our name reflects our philosophy :- a hive where design, development, and strategy come together to craft something scalable, meaningful, and timeless. From branding and websites to SaaS products and digital campaigns, we help businesses create flawless, fast, and impactful online experiences.
               </p>
               
               <div className="pt-4 border-l-4 border-orange-500 pl-6">
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed italic">
-                  We've worked with businesses of all sizes, helping them turn ambitious ideas into digital experiences that drive growth and engagement.
+                 Our mission is simple — to give every client a global presence that shines above the competition and inspires trust, creativity, and growth.
                 </p>
               </div>
             </div>
@@ -266,46 +260,7 @@ const AboutPageClient = () => {
 
       
 
-      {/* Our Values Section */}
-      {/* <section className="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Our Values
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl flex items-center justify-center mb-6">
-                  <value.icon className="w-8 h-8 text-orange-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      
       <DesignProcessSection/>
 
       {/* CTA Section */}

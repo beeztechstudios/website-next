@@ -8,12 +8,12 @@ import Image from 'next/image'; // 2. Import next/image
 
 const AboutUsSection = () => {
   return (
-    <div className="relative py-8 sm:py-12 bg-gradient-to-b from-white via-orange-50/30 to-white z-60 mb-1 md:mb-0 lg:py-20 overflow-hidden">
+    <div className="relative z-70  py-8 sm:py-12  bg-gradient-to-b from-white via-orange-50/30 to-white  mb-1 md:mb-0 lg:py-20 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-10 right-10 w-72 h-72 bg-orange-200/20 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-yellow-200/20 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto  ">
         <div className="grid lg:grid-cols-2 gap-12 px-4 sm:px-6 lg:gap-16 items-center">
           
           {/* Left Side - Visual Elements */}
@@ -22,7 +22,7 @@ const AboutUsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative order-2 lg:order-1"
+            className="relative order-2 lg:order-1 "
           >
             {/* Enhanced Decorative Background Elements */}
             <motion.div
@@ -35,7 +35,7 @@ const AboutUsSection = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute top-0 left-0 w-32 h-32 border-2 border-orange-300 rounded-3xl -z-10"
+              className="absolute top-0 left-0 w-32 h-32 border-2 border-orange-300 rounded-3xl "
             />
             <motion.div
               animate={{
@@ -46,7 +46,7 @@ const AboutUsSection = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute -top-8 -left-8 w-20 h-20 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full -z-20"
+              className="absolute -top-8 -left-8 w-20 h-20 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full "
             />
             
             {/* Main Workspace Image */}
@@ -145,7 +145,7 @@ const AboutUsSection = () => {
                   ease: "linear"
                 }
               }}
-              className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-orange-300 rounded-full -z-10"
+              className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-orange-300 rounded-full "
             />
           </motion.div>
 
@@ -155,7 +155,7 @@ const AboutUsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6 order-1 lg:order-2"
+            className="space-y-6 order-1 lg:order-2 "
           >
             {/* Label */}
             <motion.div
@@ -177,7 +177,7 @@ const AboutUsSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
             >
-              Buzzing Ideas into Digital Reality 🐝
+              Buzzing Ideas into Digital Reality 
             </motion.h2>
 
             {/* Subheading */}
@@ -188,7 +188,7 @@ const AboutUsSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg sm:text-xl text-gray-600 leading-relaxed"
             >
-              We're a creative tech agency helping brands design, develop, and grow with innovation and purpose.
+              We’re a creative tech agency turning bold ideas into powerful digital experiences that inspire, engage, and grow brands
             </motion.p>
 
             {/* Description */}
@@ -200,7 +200,7 @@ const AboutUsSection = () => {
               className="text-base text-gray-500 leading-relaxed"
             >
               
-              From startups to established businesses, we help transform your ideas into stunning digital experiences — combining creativity, code, and strategy under one roof.
+              At BeezTech, we blend creativity, technology, and strategy to craft digital solutions that stand out. From startups to enterprises, our team helps transform concepts into impactful brands — through design, development, and digital innovation.
             </motion.p>
 
             {/* Button */}

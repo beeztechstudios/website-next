@@ -142,7 +142,7 @@ const MediaProductionPageclient = () => {
 
 
 
-    <div className="bg-white min-h-screen mt-4">
+    <div className="bg-white min-h-screen mt-8 md:mt-0">
       {/* --- Hero Section --- */}
       <section className="bg-white px-4 sm:px-6 text-gray-900 min-h-screen flex items-center py-16 sm:py-28">
         <div className="max-w-7xl mx-auto w-full">
@@ -165,7 +165,7 @@ const MediaProductionPageclient = () => {
 
               <motion.h1
                 variants={itemSlide}
-                className="text-4xl sm:text-5xl lg:text-6xl  font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
               >
                   <span className="block">Visual  </span>
                   <span className="block">Storytelling for </span>{" "}
@@ -176,9 +176,8 @@ const MediaProductionPageclient = () => {
                 variants={itemSlide}
                 className="text-normal sm:text-xl text-gray-600 max-w-xl"
               >
-                We specialize in high-impact graphic design, motion graphics,
-                and professional video production to capture attention and
-                convert audiences across all platforms.
+                BeezTech crafts powerful brand stories through graphic design, motion graphics, and professional video production that captivate audiences and drive engagement. 
+                
               </motion.p>
 
               {/* Buttons: Wrap when needed on small screens */}
@@ -198,7 +197,7 @@ const MediaProductionPageclient = () => {
               </motion.div>
 
               {/* Testimonials/Stats Block */}
-              <motion.div
+              {/* <motion.div
                 variants={itemSlide}
                 className="flex items-center gap-4 pt-4"
               >
@@ -226,7 +225,7 @@ const MediaProductionPageclient = () => {
                     Trusted By 50+ Businesses
                   </span>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* Right Side (Image Grid with Staggered Pop-In) */}
@@ -272,24 +271,18 @@ const MediaProductionPageclient = () => {
             className="w-full md:w-1/2 " // Adjusted width class for better responsiveness
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Launch Your Product Story: Explainer Videos & Pitch Decks.
+              Launch Your Product Story with Explainer Videos & Pitch Decks that Convert
             </h2>
             <p className="text-gray-300 text-base md:text-xl mb-4">
-              For **SaaS** companies and those at the **MVP stage**, clear
-              communication is everything. We create dynamic explainer videos
-              and highly polished pitch presentations to articulate your value
-              instantly.
+              For SaaS startups, tech innovators, and teams at the MVP stage, clear communication defines success.
+BeezTech creates high-impact explainer videos and investor-ready pitch decks that simplify your value proposition and make your product story unforgettable.
             </p>
             <p className="text-gray-300 text-base md:text-xl mb-4">
-              Our team structures the perfect narrative, designs captivating
-              motion graphics, and prepares every slide for your **pitch
-              presentation**, ensuring you secure that crucial funding or user
-              base.
+             Our creative team crafts a compelling narrative flow, designs captivating motion graphics, and builds pitch presentations that engage, persuade, and impress.
+Every slide, animation, and transition is purpose-built to help you secure funding, attract early users, and stand out in competitive markets.
             </p>
             <p className="text-gray-300 text-base md:text-xl ">
-              From concept to final edit, we ensure your visual content is
-              optimized for conversion, clarity, and maximum impact in front of
-              investors or potential customers.
+              From concept to final edit, BeezTech ensures your visual communication is optimized for clarity, conversion, and investor impact — empowering your brand to grow with confidence and creativity.
             </p>
             <Link
               href="/book-call"
