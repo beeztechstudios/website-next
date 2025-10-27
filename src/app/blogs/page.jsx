@@ -59,33 +59,7 @@ export const metadata = {
   metadataBase: new URL('https://www.beeztech.studio'),
 };
 
-export default function BlogPage() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Blog',
-            url: 'https://www.beeztech.studio/blogs',
-            name: 'BeezTech Studio Blog',
-            description:
-              'Expert insights on branding, product design, SaaS, web development, and digital marketing from BeezTech Studio in Udaipur.',
-            publisher: {
-              '@type': 'Organization',
-              name: 'BeezTech Studio',
-              url: 'https://www.beeztech.studio',
-              logo: 'https://www.beeztech.studio/Logo_Black.png',
-            },
-            inLanguage: 'en-US',
-          }),
-        }}
-      />
-      {/* Your main blog listing component below */}
-    </>
-  );
-}
+
 
 
  
