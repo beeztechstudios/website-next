@@ -1,29 +1,29 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css"; // global styles
 import Footer from "@/components/Footer";
-import { Roboto, Epilogue, Fira_Sans } from "next/font/google";
+// import { Roboto, Epilogue, Fira_Sans } from "next/font/google";
 
-// Optimized font loading with next/font
-const roboto = Roboto({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
-  variable: '--font-roboto',
-  display: 'swap',
-});
+// // Optimized font loading with next/font
+// const roboto = Roboto({
+//   weight: ['400', '500', '700'],
+//   subsets: ['latin'],
+//   variable: '--font-roboto',
+//   display: 'swap',
+// });
 
-const epilogue = Epilogue({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  variable: '--font-epilogue',
-  display: 'swap',
-});
+// const epilogue = Epilogue({
+//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+//   subsets: ['latin'],
+//   variable: '--font-epilogue',
+//   display: 'swap',
+// });
 
-const firaSans = Fira_Sans({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  variable: '--font-fira-sans',
-  display: 'swap',
-});
+// const firaSans = Fira_Sans({
+//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+//   subsets: ['latin'],
+//   variable: '--font-fira-sans',
+//   display: 'swap',
+// });
 
 // Global Metadata for SEO
 export const metadata = {
@@ -138,7 +138,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${epilogue.variable} ${firaSans.variable}`}>
+    <html lang="en" >
       <head>
         {/* Global meta tags that are safe for all pages */}
         <meta charSet="UTF-8" />
@@ -155,9 +155,14 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+
+         <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
       </head>
 
-      <body className={roboto.className}>
+      <body >
         {/* Global Navbar */}
         <Navbar />
 

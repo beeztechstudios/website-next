@@ -19,16 +19,7 @@ interface HeroSectionProps {
 // 💡 Explicitly type the functional component with the defined interface
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
     
-    // --- SEO Integration Reminder (Keywords for pet services) ---
-    // The current content is for a design/development agency (BeezTech), not a pet services business.
-    // If the client's business were pet services in Udaipur, the H1 would be optimized like this:
-    /*
-    <h1 className="text-4xl sm:text-6xl md:text-[65px] font-pilogue font-extrabold leading-tight">
-        <span className="block">Professional Dog Training</span>
-        <span className="block"> & Pet Services in Udaipur.</span>
-        <span className="block">Book Your Appointment.</span>
-    </h1>
-    */
+   
 
     return (
         <div className="relative z-10 px-4 sm:px-6 lg:px-16 py-12 overflow-hidden">
