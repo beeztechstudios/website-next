@@ -11,9 +11,9 @@ const SERVICE_OPTIONS = [
   "Web / App Development",
   "Branding & Logo Design",
   "Digital Marketing",
-  "Media Production (Photo / Video)",
+  "Media Production",
   "SaaS Development",
-  "Not Sure Yet (Need Guidance)",
+  "Not Sure Yet",
 ];
 
 const STAGE_OPTIONS = [
@@ -93,7 +93,7 @@ const Chip = ({ children, isSelected, onClick, isMultiSelect = false }) => (
     `}
   >
     {isMultiSelect && (
-      <span className="mr-2">
+      <span className="mr-0">
         {isSelected ? (
           <Check className="w-4 h-4" />
         ) : (
@@ -252,7 +252,7 @@ const BookACallForm = () => {
             }}
           ></div>
         </div>
-        <div className="w-full max-w-xl bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
+        <div className="w-full max-w-3xl bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
           <StepIndicator currentStep={step} totalSteps={3} />
 
           {/* Form Content with Smooth Transitions */}

@@ -15,7 +15,7 @@ const SERVICE_OPTIONS = [
     'Web / App Development',
     'Branding & Logo Design', 
     'Digital Marketing',
-    'Media Production (Photo / Video)',
+    'Media Production ',
     'SaaS Development',
     'Not Sure Yet (Need Guidance)',
 ] as const; // 'as const' makes this an array of literal strings
@@ -102,7 +102,7 @@ const Chip: React.FC<ChipProps> = ({ children, isSelected, onClick, isMultiSelec
         `}
     >
         {isMultiSelect && (
-            <span className="mr-2">
+            <span className="mr-0">
                 {isSelected ? <Check className="w-4 h-4" /> : <X className="w-4 h-4 opacity-0" />}
             </span>
         )}
