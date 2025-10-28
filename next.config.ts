@@ -1,8 +1,5 @@
-// next.config.ts
+import type { NextConfig } from 'next';
 
-import { NextConfig } from 'next';
-
-/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -12,13 +9,23 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
-    domains: [
-      'www.framer.com',
-      'y4pdgnepgswqffpt.public.blob.vercel-storage.com',
-      '5pdgnepgswqffpt.public.blob.vercel-storage.com',
-      'i.imgur.com',
-    ],
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.framer.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'y4pdgnepgswqffpt.public.blob.vercel-storage.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '5pdgnepgswqffpt.public.blob.vercel-storage.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+      },
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
@@ -35,13 +42,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '**.public.blob.vercel-storage.com',
       },
+      { protocol: 'https',
+         hostname: '*' 
+      },
     ],
   },
-  // Performance optimizations
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  swcMinify: true,
 };
 
 export default nextConfig;

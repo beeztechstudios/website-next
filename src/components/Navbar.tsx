@@ -46,21 +46,21 @@ export default function Navbar() {
             title: 'Branding',
             description: 'Production ready Tailwind CSS components for your next project',
             icon: '✨',
-            image: '/branding_service_logo.png',
+            image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026415/branding_service_logo_fa5bam.png',
             link: '/services/branding'
         },
         {
             title: 'Digital Marketing',
             description: 'Never write from scratch again. Go from idea to blog in minutes.',
             icon: '📈',
-            image: '/marketing_service_logo.png',
+            image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026417/marketing_service_logo_abelyq.png',
             link: '/services/digital-marketing'
         },
         {
             title: 'Media Production',
             description: 'Stunning visual content that tells your story',
             icon: '🎬',
-            image: '/media_service_logo.png',
+            image: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026416/media_service_logo_usuh0b.png',
             link: '/services/media-production'
         },
     ];

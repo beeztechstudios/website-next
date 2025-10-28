@@ -127,7 +127,7 @@ const WebDevelopmentPage = () => {
       name: "Mobile App Launch Campaign",
       category: "Performance Marketing",
       image:
-        "https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F54514%2Ffusion-ai-wS70RFMTxlA0bMlp8ouZoqCOQjRpFw&w=3840&q=100",
+        "https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F48081%2Fgympro-F9Ce8jYIZzGlIklKwKHI6b7YSpWs08&w=3840&q=100",
       link: "https://www.example.com/project/mobile",
       result: "5M New App Downloads",
       icon: <Zap className="w-8 h-8 text-purple-600" />,
@@ -207,7 +207,7 @@ const WebDevelopmentPage = () => {
     },
   };
   const imageSources = [
-    "https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F54514%2Ffusion-ai-wS70RFMTxlA0bMlp8ouZoqCOQjRpFw&w=3840&q=100",
+    "https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F48081%2Fgympro-F9Ce8jYIZzGlIklKwKHI6b7YSpWs08&w=3840&q=100",
 
     "/webimg1.jpg",
     "https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F49749%2Foptimistic-7QAhEhFXH72T4u3Djr8Qk1z7BLNJVf&w=3840&q=100",
@@ -299,7 +299,7 @@ const WebDevelopmentPage = () => {
 
 
 
-    <div className="  min-h-screen mt-4">
+    <div className="  min-h-screen mt-8 md:mt-6">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -360,8 +360,7 @@ const WebDevelopmentPage = () => {
                 variants={itemSlide}
                 className="text-base sm:text-xl text-gray-600 max-w-xl"
               >
-                Our goal is simple: create web solutions that not only look
-                stunning but also drive measurable results for your business.
+                BeezTech design and develop high-performing, responsive, and scalable websites that go beyond aesthetics and drive measurable growth for your business.
               </motion.p>
 
               {/* Buttons: Wrap when needed on small screens */}
@@ -381,7 +380,7 @@ const WebDevelopmentPage = () => {
               </motion.div>
 
               {/* Testimonials/Stats Block */}
-              <motion.div
+              {/* <motion.div
                 variants={itemSlide}
                 className="flex items-center gap-4 pt-4"
               >
@@ -409,7 +408,7 @@ const WebDevelopmentPage = () => {
                     Trusted By 50+ Businesses
                   </span>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* Right Side (Image Grid with Staggered Pop-In) */}

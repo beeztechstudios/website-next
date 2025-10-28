@@ -41,7 +41,7 @@ const HeroSection = () => {
               </text>
             </svg>
           </div>
-          <img src="/Icon.png" className="p-5" />
+          <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="icon image " className="p-5" />
         </div>
       </div>
 

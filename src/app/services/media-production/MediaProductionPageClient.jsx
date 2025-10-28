@@ -142,7 +142,7 @@ const MediaProductionPageclient = () => {
 
 
 
-    <div className="bg-white min-h-screen mt-8 md:mt-0">
+    <div className="bg-white min-h-screen mt-8 md:-mt-5">
       {/* --- Hero Section --- */}
       <section className="bg-white px-4 sm:px-6 text-gray-900 min-h-screen flex items-center py-16 sm:py-28">
         <div className="max-w-7xl mx-auto w-full">

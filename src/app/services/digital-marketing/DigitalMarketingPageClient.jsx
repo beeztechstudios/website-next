@@ -368,7 +368,7 @@ const DigitalMarketingPage = () => {
   return (
     <>
       
-      <div className="bg-white mt-8 md:mt-0 min-h-screen ">
+      <div className="bg-white mt-8 md:-mt-1 min-h-screen ">
         {/* Hero Section */}
 
         <section className="bg-[white] px-4 sm:px-6 text-gray-900 min-h-screen flex items-center py-16 sm:py-24">
@@ -665,7 +665,7 @@ const DigitalMarketingPage = () => {
                   Questions <span className="text-gray-400">& answers.</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Everything you need to know about our **web development** and
+                  Everything you need to know about our digital-marketing and
                   recurring support service.
                 </p>
 
@@ -680,7 +680,7 @@ const DigitalMarketingPage = () => {
                         Have more questions?
                       </p>
                       <p className="text-sm text-gray-600">
-                        Book a free discovery call with a founder
+                        Book a free discovery call with team
                       </p>
                     </div>
                   </div>
