@@ -1,4 +1,3 @@
-// components/TestimonialsSection.tsx
 'use client';
 import React, { useState, useEffect, useRef } from "react";
 import {
@@ -34,9 +33,6 @@ interface AnimatedNumberProps {
 
 // --- 2. AnimatedNumber Component (Typed) ---
 
-// 💡 Use React.FC<Props> for functional components
-// --- 2. AnimatedNumber Component (Typed) ---
-
 const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0 }) => {
     // 💡 Explicitly type useRef for a div element
     const ref = useRef<HTMLDivElement>(null);
@@ -44,19 +40,36 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
 
     // 💡 count is a MotionValue<number>
     const count = useMotionValue(0);
-    // 💡 rounded is a MotionValue<string | number>
+
+    // 💡 rounded is a MotionValue<string> after transformation
     const rounded = useTransform(count, (latest: number) => {
+        // Apply rounding first
+        const roundedValue = Math.round(latest);
+        
+        // Then apply formatting
         if (value.includes("%")) {
-            return Math.round(latest) + "%";
+            return roundedValue + "%";
         } else if (value.includes("M")) {
-            return Math.round(latest) + "M";
+            return roundedValue + "M";
         } else if (value.includes("+")) {
-            // CRITICAL FIX: Ensure the '+' sign is appended only when needed
-            // The numericValue parsing above strips it, so we add it back here.
-            return Math.round(latest) + "+"; 
+            return roundedValue + "+"; 
         }
-        return Math.round(latest);
+        return String(roundedValue); // Ensure a string is returned for the state below
     });
+
+    // 🐞 FIX START: Use a local state to hold the final displayed string value.
+    // This solves the TypeScript error caused by rendering the MotionValue object directly.
+    const [displayedText, setDisplayedText] = useState('0');
+
+    useEffect(() => {
+        // Subscribe to the MotionValue changes and update the local state.
+        const unsubscribe = rounded.on('change', (latest) => {
+            // latest here is the string (e.g., "26+") produced by useTransform
+            setDisplayedText(String(latest));
+        });
+        return () => unsubscribe();
+    }, [rounded]);
+    // 🐞 FIX END
 
     // 💡 Explicitly parse the numeric part of the string
     const numericValue: number = parseInt(value.replace(/[^\d]/g, "") || '0');
@@ -82,8 +95,8 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value, label, delay = 0
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay }}
             >
-                {/* 🐞 FIX: UNCOMMENTED and placed the motion.span to display the value */}
-                <motion.span>{rounded}</motion.span>
+                {/* 🎯 FIX: Render the standard string state (displayedText) instead of the MotionValue (rounded) */}
+                <motion.span>{displayedText}</motion.span>
             </motion.div>
             <motion.div
                 className="text-sm sm:text-base lg:text-[14px] text-white-300 font-light"
@@ -144,9 +157,9 @@ const TestimonialsSection: React.FC = () => {
 
     // 💡 Apply the Stat interface
     const stats: Stat[] = [
-        { number: "26+", label: "Finalized Projects" },
+        { number: "45+", label: "Finalized Projects" },
         { number: "98%", label: "Client satisfaction rate" },
-        { number: "10M", label: "Gross Revenue" },
+        { number: "8M", label: "Gross Revenue" },
     ];
 
     // Auto-play testimonials
