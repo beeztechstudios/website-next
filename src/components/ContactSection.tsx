@@ -173,7 +173,7 @@ const Step1: React.FC<Step1Props> = ({ formData, updateFormData, errors }) => (
             label="Email Address"
             name="email"
             type="email"
-            placeholder="hello@Beeztech .com"
+            placeholder="hello@Beeztech.com"
             value={formData.email}
             onChange={(e) => updateFormData('email', e.target.value)}
             required
@@ -665,27 +665,27 @@ const ContactSection: React.FC = () => { // 💡 Component function type definit
                                 {[...Array(3)].map((_, setIndex) => (
                                     <React.Fragment key={setIndex}>
                                         <span className="text-xl sm:text-4xl md:text-[25px] font-pilogue font-bold">
-                                            hello@Beeztech .studio
+                                            hello@Beeztech.studio
                                         </span>
                                         <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="Asterisk Separator" className=" h-4 md:h-8"></img>
                 
                                         <span className="text-xl sm:text-4xl md:text-[25px] font-pilogue font-bold">
-                                            hello@Beeztech .studio
+                                            hello@Beeztech.studio
                                         </span>
                                         <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="Asterisk Separator" className="h-4 md:h-8"></img>
                 
                                         <span className="text-xl sm:text-4xl md:text-[25px] font-pilogue font-bold">
-                                            hello@Beeztech .studio
+                                            hello@Beeztech.studio
                                         </span>
                                         <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="Asterisk Separator" className="h-4 md:h-8"></img>
                 
                                         <span className="text-xl sm:text-4xl md:text-[25px] font-pilogue font-bold">
-                                            hello@Beeztech .studio
+                                            hello@Beeztech.studio
                                         </span>
                                         <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="Asterisk Separator" className="h-4 md:h-8"></img>
                 
                                         <span className="text-xl sm:text-4xl md:text-[25px] font-pilogue font-bold opacity-40">
-                                            hello@Beeztech .studio
+                                            hello@Beeztech.studio
                                         </span>
                                         <img src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Icon_tgjxar.svg" alt="Asterisk Separator" className="h-4 md:h-8 "></img>
                                     </React.Fragment>
