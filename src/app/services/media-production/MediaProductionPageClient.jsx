@@ -176,7 +176,7 @@ const MediaProductionPageclient = () => {
                 variants={itemSlide}
                 className="text-normal sm:text-xl text-gray-600 max-w-xl"
               >
-                BeezTech crafts powerful brand stories through graphic design, motion graphics, and professional video production that captivate audiences and drive engagement. 
+                Beeztech crafts powerful brand stories through graphic design, motion graphics, and professional video production that captivate audiences and drive engagement. 
                 
               </motion.p>
 
@@ -275,14 +275,14 @@ const MediaProductionPageclient = () => {
             </h2>
             <p className="text-gray-300 text-base md:text-xl mb-4">
               For SaaS startups, tech innovators, and teams at the MVP stage, clear communication defines success.
-BeezTech creates high-impact explainer videos and investor-ready pitch decks that simplify your value proposition and make your product story unforgettable.
+Beeztech creates high-impact explainer videos and investor-ready pitch decks that simplify your value proposition and make your product story unforgettable.
             </p>
             <p className="text-gray-300 text-base md:text-xl mb-4">
              Our creative team crafts a compelling narrative flow, designs captivating motion graphics, and builds pitch presentations that engage, persuade, and impress.
 Every slide, animation, and transition is purpose-built to help you secure funding, attract early users, and stand out in competitive markets.
             </p>
             <p className="text-gray-300 text-base md:text-xl ">
-              From concept to final edit, BeezTech ensures your visual communication is optimized for clarity, conversion, and investor impact — empowering your brand to grow with confidence and creativity.
+              From concept to final edit, Beeztech ensures your visual communication is optimized for clarity, conversion, and investor impact — empowering your brand to grow with confidence and creativity.
             </p>
             <Link
               href="/book-call"

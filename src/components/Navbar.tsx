@@ -134,7 +134,7 @@ export default function Navbar() {
                             <Link href="/" onClick={() => setActiveLink('')}>
                                 <Image
                                     src="/Logo_Black.png"
-                                    alt="BeezTech Studio - Creative Digital Agency in Udaipur"
+                                    alt="Beeztech  - Creative Digital Agency in Udaipur"
                                     width={160}
                                     height={50}
                                     className="w-full h-auto"
@@ -191,7 +191,7 @@ export default function Navbar() {
                                                         <div className="flex-shrink-0 w-1/4 pr-3 relative h-20">
                                                             <Image
                                                                 src={service.image}
-                                                                alt={`${service.title} - BeezTech Studio Services`}
+                                                                alt={`${service.title} - Beeztech  Services`}
                                                                 fill
                                                                 className='rounded-lg object-contain shadow-md'
                                                             />
@@ -233,7 +233,7 @@ export default function Navbar() {
                             <Link href="/" onClick={() => setActiveLink('')}>
                                 <Image
                                     src="/Logo_Black.png"
-                                    alt="BeezTech Studio - Creative Digital Agency in Udaipur"
+                                    alt="Beeztech  - Creative Digital Agency in Udaipur"
                                     width={140}
                                     height={45}
                                     className="w-full h-auto"
@@ -284,7 +284,7 @@ export default function Navbar() {
                                                 <div className="text-3xl flex-shrink-0 relative w-16 h-16">
                                                     <Image
                                                         src={service.image}
-                                                        alt={`${service.title} - BeezTech Studio Services`}
+                                                        alt={`${service.title} - Beeztech  Services`}
                                                         fill
                                                         className='rounded-lg object-contain shadow-md'
                                                     />

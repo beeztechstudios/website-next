@@ -5,7 +5,7 @@ import BrandingPageClient from './BrandingPageClient';
 export const metadata = {
   title: "Branding Agency in Udaipur | Logo & Brand Identity Design – BeezTech",
   description:
-    "BeezTech is a creative branding agency in Udaipur offering professional logo design, brand identity, packaging, and marketing materials for startups and growing businesses. We also serve clients in Indore, Gandhinagar, and overseas.",
+    "Beeztech is a creative branding agency in Udaipur offering professional logo design, brand identity, packaging, and marketing materials for startups and growing businesses. We also serve clients in Indore, Gandhinagar, and overseas.",
   keywords: [
     "branding agency Udaipur",
     "logo design Udaipur",
@@ -18,13 +18,13 @@ export const metadata = {
     "affordable branding studio Rajasthan",
     "international branding partner",
   ],
-  authors: [{ name: "BeezTech Studio" }],
+  authors: [{ name: "Beeztech " }],
   robots: "index, follow",
 
   openGraph: {
-    title: "Creative Branding Agency in Udaipur | BeezTech Studio",
+    title: "Creative Branding Agency in Udaipur | Beeztech ",
     description:
-      "Looking for professional branding in Udaipur? BeezTech creates logos, brand identities, and design systems for startups in India and overseas.",
+      "Looking for professional branding in Udaipur? Beeztech creates logos, brand identities, and design systems for startups in India and overseas.",
     url: "https://www.beeztech.studio/services/branding",
     type: "website",
     // images: [
@@ -32,7 +32,7 @@ export const metadata = {
     //     url: "https://www.beeztech.studio/images/og-branding.png",
     //     width: 1200,
     //     height: 630,
-    //     alt: "BeezTech Branding Services in Udaipur",
+    //     alt: "Beeztech Branding Services in Udaipur",
     //   },
     // ],
   },

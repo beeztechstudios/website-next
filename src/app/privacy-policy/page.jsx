@@ -1,10 +1,10 @@
 import React from "react";
 export const metadata = {
-  title: "Privacy Policy | BeezTech Studio",
+  title: "Privacy Policy | Beeztech ",
   description:
-    "Learn how BeezTech Studio collects, uses, and protects your personal data across branding, design, and web development services.",
+    "Learn how Beeztech  collects, uses, and protects your personal data across branding, design, and web development services.",
   keywords:
-    "BeezTech Studio privacy policy, data protection, BeezTech Udaipur, GDPR compliance, BeezTech website privacy",
+    "Beeztech  privacy policy, data protection, Beeztech Udaipur, GDPR compliance, Beeztech website privacy",
   robots: "index, follow",
   alternates: {
     canonical: "https://www.beeztech.studio/privacy-policy",
@@ -26,9 +26,9 @@ export default function PrivacyPolicy() {
         </p>
 
         <section className="space-y-4 text-sm md:text-xl  mt-8 mb-4  md:mt-14 md:mb-8">
-           <h2 className="text-2xl md:text-4xl font-bold mt-8 mb-4  md:mt-14 md:mb-8">Privacy at BeezTech</h2>
+           <h2 className="text-2xl md:text-4xl font-bold mt-8 mb-4  md:mt-14 md:mb-8">Privacy at Beeztech</h2>
           <p>
-            At <strong>BeezTech Studio</strong>, we are committed to safeguarding
+            At <strong>Beeztech</strong>, we are committed to safeguarding
             your privacy and ensuring your data is handled responsibly. This
             Privacy Policy explains how we collect, use, and protect personal
             information across our website and services including design,
@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
 
           <h2 className="text-2xl md:text-4xl font-bold mt-8 mb-4  md:mt-14 md:mb-8">Log Files</h2>
           <p>
-            Like most websites, BeezTech Studio uses standard log files. These
+            Like most websites, Beeztech  uses standard log files. These
             logs include IP addresses, browser type, date/time stamps, and
             referring pages. This data helps us analyze trends and administer
             the website. It is not linked to personally identifiable
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
             Third-Party Services
           </h2>
           <p>
-            BeezTech Studio may use trusted third-party tools like analytics,
+            Beeztech may use trusted third-party tools like analytics,
             form processors, and payment gateways. These services have their own
             privacy policies, and we encourage you to review them separately.
           </p>
@@ -143,7 +143,7 @@ export default function PrivacyPolicy() {
             usage, please contact:
           </p>
           <p className="mt-2">
-            <strong>BeezTech Studio</strong>
+            <strong>Beeztech </strong>
             <br />
             Email:{" "}
             <a

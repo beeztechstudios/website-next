@@ -161,7 +161,7 @@ export async function POST(req: NextRequest) {
             <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px; border-bottom: 2px solid #FE7B50;">
                 <tr>
                     <td style="padding-bottom: 10px;">
-                        <img src="https://res.cloudinary.com/dy0zo3822/image/upload/v1759841419/Logo_Black_4x_pqwsbj.png" alt="BeezTech Logo" style="height: 40px; border: 0;">
+                        <img src="https://res.cloudinary.com/dy0zo3822/image/upload/v1759841419/Logo_Black_4x_pqwsbj.png" alt="Beeztech Logo" style="height: 40px; border: 0;">
                     </td>
                 </tr>
             </table>
@@ -221,11 +221,11 @@ export async function POST(req: NextRequest) {
             </p>
             <p style="font-size: 15px; margin-bottom: 0;">
                 Best regards,<br>
-                <strong style="color: #333;">The BeezTech Team</strong>
+                <strong style="color: #333;">The Beeztech Team</strong>
             </p>
 
             <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; text-align: center; font-size: 12px; color: #888;">
-                <p>BeezTech Agency | <a href="YOUR_WEBSITE_LINK" style="color: #FE7B50; text-decoration: none;">Visit Our Website</a></p>
+                <p>Beeztech  | <a href="https://www.beeztech.studio/" style="color: #FE7B50; text-decoration: none;">Visit Our Website</a></p>
             </div>
         </div>
       `,
@@ -237,7 +237,7 @@ export async function POST(req: NextRequest) {
     // --- C. Send Internal Notification Email (FROM Your Personal Account) ---
     const notificationMailOptions = {
       from: SENDER_USER, // SENDER: Your Personal Account
-      to: INTERNAL_RECIPIENT, // RECIPIENT: BeezTech Account
+      to: INTERNAL_RECIPIENT, // RECIPIENT: Beeztech Account
       subject: `🚨 NEW INQUIRY: ${submissionData.project_details.services.join(
         ', '
       )} from ${clientName}`,

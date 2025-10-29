@@ -60,7 +60,7 @@ const AboutUsSection = () => {
             >
               <Image
                 src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg"
-                alt="BeezTech Studio Modern Creative Workspace"
+                alt="Beeztech   Studio Modern Creative Workspace"
                 width={700}
                 height={500}
                 className="w-full h-auto object-cover"
@@ -122,7 +122,7 @@ const AboutUsSection = () => {
             >
               <Image
                 src="https://framerusercontent.com/images/EtyhVt5k6VdQGzImZKutvGH8I.png"
-                alt="BeezTech Studio Team Member"
+                alt="Beeztech   Studio Team Member"
                 width={192}
                 height={192}
                 className="w-full h-full object-cover"
@@ -200,7 +200,7 @@ const AboutUsSection = () => {
               className="text-base text-gray-500 leading-relaxed"
             >
               
-              At BeezTech, we blend creativity, technology, and strategy to craft digital solutions that stand out. From startups to enterprises, our team helps transform concepts into impactful brands — through design, development, and digital innovation.
+              At Beeztech  , we blend creativity, technology, and strategy to craft digital solutions that stand out. From startups to enterprises, our team helps transform concepts into impactful brands — through design, development, and digital innovation.
             </motion.p>
 
             {/* Button */}

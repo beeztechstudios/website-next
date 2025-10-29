@@ -317,7 +317,7 @@ const Step1: React.FC<Step1Props> = ({ formData, updateFormData, errors }) => (
     <Input
       label="Business / Brand Name (Optional)"
       name="business_name"
-      placeholder="BeezTech"
+      placeholder="Beeztech "
       value={formData.business_name}
       onChange={(e) => updateFormData('business_name', e.target.value)}
     />
@@ -326,7 +326,7 @@ const Step1: React.FC<Step1Props> = ({ formData, updateFormData, errors }) => (
       label="Email Address"
       name="email"
       type="email"
-      placeholder="hello@beeztech.com"
+      placeholder="hello@Beeztech .com"
       value={formData.email}
       onChange={(e) => updateFormData('email', e.target.value)}
       required

@@ -145,7 +145,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                                 transition={{ duration: 0.6, delay: 0.4 }}
                                 className=" mt-4 text-base sm:text-lg lg:text-xl text-gray-400 font-pilogue font-medium leading-relaxed max-w-xl mx-auto lg:mx-0"
                             >
-                                BeezTech  provide end-to-end digital solutions to  businesses across India and overseas build strong brands and scalable digital experiences.
+                                Beeztech provide end-to-end digital solutions to  businesses across India and overseas build strong brands and scalable digital experiences.
                             </motion.p>
                         </motion.div>
 
@@ -284,7 +284,7 @@ const ServicesSection = forwardRef((props, ref: Ref<HTMLDivElement>) => {
                             >
                                 <Image
                                     src={services[hoveredService].image}
-                                    alt={`${services[hoveredService].title} - BeezTech Studio Service`}
+                                    alt={`${services[hoveredService].title} - Beeztech   Service`}
                                     width={500}
                                     height={500}
                                     className="w-full h-auto rounded-3xl"

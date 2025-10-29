@@ -139,7 +139,7 @@ const WebDevelopmentPage = () => {
 
   const faqs = [
     {
-      q: "How does BeezTech ensure my website is scalable?",
+      q: "How does Beeztech ensure my website is scalable?",
       a: "We focus on clean architecture using modern stacks like **Next.js/React** and **Node.js**. This modular design ensures that as your user base grows or new features are needed, the application can scale horizontally without costly refactoring. We build for growth, not just for launch.",
     },
     {
@@ -233,7 +233,7 @@ const WebDevelopmentPage = () => {
               "description": "Professional web and app development services including custom web applications, e-commerce platforms, mobile apps, and API development in Udaipur, Rajasthan.",
               "provider": {
                 "@type": "Organization",
-                "name": "BeezTech Studio",
+                "name": "Beeztech ",
                 "url": "https://www.beeztech.studio"
               },
               "areaServed": {
@@ -282,7 +282,7 @@ const WebDevelopmentPage = () => {
                   variants={itemSlide}
                   className="text-base sm:text-xl text-gray-600 max-w-xl"
                 >
-                  BeezTech design and develop high-performing, responsive, and scalable websites that go beyond aesthetics and drive measurable growth for your business.
+                  Beeztech design and develop high-performing, responsive, and scalable websites that go beyond aesthetics and drive measurable growth for your business.
                 </motion.p>
 
                 {/* Buttons: Wrap when needed on small screens */}

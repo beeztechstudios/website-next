@@ -403,7 +403,7 @@ const DigitalMarketingPage = () => {
                   variants={itemSlide}
                   className="text-normal sm:text-xl text-gray-600 max-w-xl"
                 >
-                 From SEO and performance ads to social media and content marketing, BeezTech help your business achieve measurable growth across every channel.
+                 From SEO and performance ads to social media and content marketing, Beeztech help your business achieve measurable growth across every channel.
                 </motion.p>
 
                 {/* Buttons: Wrap when needed on small screens */}

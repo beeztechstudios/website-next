@@ -4,9 +4,9 @@ import MediaProductionPageClient from './MediaProductionPageClient';
 
 export const metadata = {
   title:
-    "Media & Graphics Production Agency in Udaipur | Video Editing, Motion Graphics – BeezTech",
+    "Media & Graphics Production Agency in Udaipur | Video Editing, Motion Graphics – Beeztech",
   description:
-    "BeezTech offers professional media and graphics production services in Udaipur, including motion graphics, video editing, photography, and creative direction. Trusted by startups and brands in Indore, Gandhinagar, and overseas for high-impact visuals.",
+    "Beeztech offers professional media and graphics production services in Udaipur, including motion graphics, video editing, photography, and creative direction. Trusted by startups and brands in Indore, Gandhinagar, and overseas for high-impact visuals.",
   keywords: [
     "media production Udaipur",
     "graphics design Udaipur",
@@ -19,14 +19,14 @@ export const metadata = {
     "post production studio Rajasthan",
     "international media design partner",
   ],
-  authors: [{ name: "BeezTech Studio" }],
+  authors: [{ name: "Beeztech " }],
   robots: "index, follow",
 
   openGraph: {
     title:
-      "Media & Graphics Production Agency in Udaipur | BeezTech Studio",
+      "Media & Graphics Production Agency in Udaipur | Beeztech ",
     description:
-      "Professional media and graphics production services by BeezTech in Udaipur. From motion graphics and video production to creative campaigns for startups and global brands.",
+      "Professional media and graphics production services by Beeztech in Udaipur. From motion graphics and video production to creative campaigns for startups and global brands.",
     url: "https://www.beeztech.studio/services/media-production",
     type: "website",
     // images: [
@@ -34,7 +34,7 @@ export const metadata = {
     //     url: "https://www.beeztech.studio/images/og-media-production.png",
     //     width: 1200,
     //     height: 630,
-    //     alt: "BeezTech Media & Graphics Production Services in Udaipur",
+    //     alt: "Beeztech Media & Graphics Production Services in Udaipur",
     //   },
     // ],
   },
@@ -42,9 +42,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Media & Graphics Production Services in Udaipur – BeezTech Studio",
+      "Media & Graphics Production Services in Udaipur – Beeztech ",
     description:
-      "BeezTech provides media production, video editing, motion graphics, and creative direction for startups and marketing teams across Udaipur and beyond.",
+      "Beeztech provides media production, video editing, motion graphics, and creative direction for startups and marketing teams across Udaipur and beyond.",
     // images: ["https://www.beeztech.studio/images/og-media-production.png"],
   },
 

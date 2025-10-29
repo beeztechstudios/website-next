@@ -69,7 +69,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
                             transition={{ delay: 0.4 }}
                             className="text-base sm:text-lg lg:text-xl text-gray-600 font-pilogue font-medium leading-relaxed max-w-lg mx-auto lg:mx-0"
                         >
-                            From branding & design to web development and marketing BeezTech is your all-in-one creative digital agency in Udaipur. 
+                            From branding & design to web development and marketing Beeztech  is your all-in-one creative digital agency in Udaipur. 
                             
                         </motion.p>
 

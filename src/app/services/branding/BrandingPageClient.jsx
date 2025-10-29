@@ -88,7 +88,7 @@ const BrandingPageClient = () => {
   // FAQs
   const faqs = [
     {
-      q: "How does BeezTech ensure my website is scalable?",
+      q: "How does Beeztech ensure my website is scalable?",
       a: "We focus on clean architecture using modern stacks like Next.js/React and Node.js. This modular design ensures that as your user base grows or new features are needed, the application can scale horizontally without costly refactoring.",
     },
     {
@@ -164,7 +164,7 @@ const BrandingPageClient = () => {
                   variants={itemSlide}
                   className="text-base sm:text-xl text-gray-600 max-w-xl"
                 >
-                  From logo design and brand strategy to visual identity and storytelling, BeezTech craft distinctive brand experiences that connect emotionally and perform powerfully 
+                  From logo design and brand strategy to visual identity and storytelling, Beeztech craft distinctive brand experiences that connect emotionally and perform powerfully 
                 </motion.p>
                 <motion.div
                   variants={itemSlide}
@@ -273,7 +273,7 @@ const BrandingPageClient = () => {
                 Launch a New Brand or Transform Your Existing Identity — with BeezTech.
               </h2>
               <p className="text-gray-300 text-base md:text-xl mb-4">
-                Whether you’re entering a competitive market or planning a complete rebranding, BeezTech delivers end-to-end digital branding services that help your business stand out and scale.
+                Whether you’re entering a competitive market or planning a complete rebranding, Beeztech delivers end-to-end digital branding services that help your business stand out and scale.
               </p>
               <p className="text-gray-300 text-base md:text-xl mb-4">
                 We create memorable brand identities through research-driven brand strategy, logo design, and visual storytelling — ensuring your message resonates with the right audience.

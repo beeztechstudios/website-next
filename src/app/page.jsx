@@ -3,25 +3,25 @@ import HomePageClient from './HomePageClient';
 
 
 export const metadata = {
-  title: 'BeezTech Studio | Web App, SaaS & Branding Agency in Udaipur',
+  title: 'Beeztech | Web App, SaaS & Branding Agency in Udaipur',
   description:
-    'BeezTech Studio is a creative tech agency from Udaipur specializing in custom web apps, SaaS MVPs, UI/UX design, and branding. We help startups and businesses turn buzzing ideas into reality across India and globally.',
+    'Beeztech  is a creative tech agency from Udaipur specializing in custom web apps, SaaS MVPs, UI/UX design, and branding. We help startups and businesses turn buzzing ideas into reality across India and globally.',
   keywords:
     'web development company udaipur, SaaS development udaipur, branding agency udaipur, UI UX design udaipur, MVP development udaipur, custom web app development, creative agency rajasthan, product design studio udaipur, startup design and development agency',
-  authors: [{ name: 'BeezTech Studio' }],
+  authors: [{ name: 'Beeztech  ' }],
   openGraph: {
     title:
-      'BeezTech Studio | Creative Web & Branding Agency in Udaipur, India',
+      'Beeztech  Studio | Creative Web & Branding Agency in Udaipur, India',
     description:
-      'Build your next SaaS, website, or brand identity with BeezTech Studio — a creative tech agency from Udaipur offering web app development, UI/UX design, and branding solutions for startups and businesses.',
-    url: 'https://www.beeztech.studio/',
-    siteName: 'BeezTech Studio',
+      'Build your next SaaS, website, or brand identity with Beeztech  — a creative tech agency from Udaipur offering web app development, UI/UX design, and branding solutions for startups and businesses.',
+    url: 'https://www.Beeztech.studio/',
+    siteName: 'Beeztech ',
     images: [
       {
         url: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Logo_Black_s4dbro.png',
         width: 1200,
         height: 630,
-        alt: 'BeezTech Studio – Web App & Branding Agency in Udaipur',
+        alt: 'Beeztech | Web App & Branding Agency in Udaipur',
       },
     ],
     type: 'website',
@@ -30,14 +30,14 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      'BeezTech Studio | Web App, SaaS & Branding Agency in Udaipur',
+      'Beeztech  | Web App, SaaS & Branding Agency in Udaipur',
     description:
-      'BeezTech Studio creates stunning brands, SaaS products, and custom web apps. Based in Udaipur, serving startups across India and abroad.',
+      'Beeztech   creates stunning brands, SaaS products, and custom web apps. Based in Udaipur, serving startups across India and abroad.',
     images: ['https://res.cloudinary.com/dwz07ormq/image/upload/v1760026414/Logo_Black_s4dbro.png'],
-    creator: '@BeezTechStudio',
+    creator: '@Beeztech ',
   },
   alternates: {
-    canonical: 'https://www.beeztech.studio/',
+    canonical: 'https://www.Beeztech.studio/',
   },
 };
 

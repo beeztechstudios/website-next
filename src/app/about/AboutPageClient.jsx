@@ -220,7 +220,7 @@ const AboutPageClient = () => {
           >
             <div className="space-y-6 text-left max-w-4xl mx-auto">
               <p className="text-xl sm:text-2xl text-gray-800 leading-relaxed font-light">
-                BeezTech was born from a simple yet powerful idea — just like a hive built by tiny bees, creativity and collaboration can{" "}
+                Beeztech was born from a simple yet powerful idea — just like a hive built by tiny bees, creativity and collaboration can{" "}
                 <span className="text-orange-500 font-semibold relative ">
                    build something extraordinary
                   <svg className="absolute -bottom-1 left-0 w-full" height="3" viewBox="0 0 100 3" preserveAspectRatio="none">

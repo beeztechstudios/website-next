@@ -42,9 +42,9 @@ const services: NavLink[] = [
 
 const socialLinks: SocialLink[] = [
     // { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
-    // { name: 'Twitter', icon: Twitter, href: 'https://x.com/BeezTechStudio' },
-    // { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/beeztech/' },
-    // { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/beeztech' },
+    // { name: 'Twitter', icon: Twitter, href: 'https://x.com/Beeztech Studio' },
+    // { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/Beeztech /' },
+    // { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/Beeztech ' },
     // { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' }
 ];
 
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
     
     // --- SEO Integration Reminder ---
     // The address below already includes the Geographical Keyword: "Udaipur, Rajasthan, India"
-    // The mail link uses the company name: "hello@beeztech.studio"
+    // The mail link uses the company name: "hello@Beeztech .studio"
 
     return (
         <footer className="bg-black relative text-white">
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
                         <Link href="/" className="block mb-6">
                             <Image
                                 src="/Logo_White.png"
-                                alt="BeezTech Studio - Creative Digital Agency"
+                                alt="Beeztech  Studio - Creative Digital Agency"
                                 width={200}
                                 height={60}
                                 className="w-52 h-auto"
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300"
-                                    aria-label={`Visit BeezTech on ${social.name}`}
+                                    aria-label={`Visit Beeztech  on ${social.name}`}
                                 >
                                     {/* 💡 Rendering the LucideIcon component */}
                                     <social.icon className="w-5 h-5" /> 
@@ -161,8 +161,8 @@ const Footer: React.FC = () => {
                             {/* Email Address */}
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                                <a href="mailto:hello@beeztech.studio" className="hover:text-orange-500 transition-colors">
-                                    hello@beeztech.studio
+                                <a href="mailto:hello@Beeztech.studio" className="hover:text-orange-500 transition-colors">
+                                    hello@Beeztech.studio
                                 </a>
                             </li>
                         </ul>
@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-6">
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
                     <p>
-                        © {new Date().getFullYear()} BeezTech. All rights reserved.
+                        © {new Date().getFullYear()} Beeztech . All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         {/* 💡 Use Link for Policy pages */}
