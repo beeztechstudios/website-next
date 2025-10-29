@@ -23,17 +23,21 @@ const BrandingPageClient = () => {
 
   // Auto-scroll animation for image grids
   const rightImagesCol1 = [
-    "https://img.freepik.com/premium-vector/elegant-luxury-logo-design-featuring-golden-elements-premium-branding-highend-businesses_1184980-10363.jpg",
-    "https://cdn.dribbble.com/userupload/16279500/file/original-05fd4e6eae00bed6e978a728f4921800.png?format=webp&resize=400x300&vertical=center",
-    "https://www.logopeople.in/wp-content/uploads/2023/05/Less-is-more-always-1.png",
-    "https://img.freepik.com/premium-photo/x-k-x-letter-logo-design-luxury-gold-monogram-emblem_1308175-168995.jpg?semt=ais_hybrid&w=740&q=80",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715292/IMG-20251028-WA0041_txk6rv.jpg",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715292/IMG-20251028-WA0043_oclxur.jpg",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715290/IMG-20251028-WA0022_r49omj.jpg",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715290/IMG-20251028-WA0024_akwz1v.jpg",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715889/WhatsApp_Image_2025-10-29_at_11.00.54_e733f1ff_nos2oe.jpg"
+
+
   ];
 
   const rightImagesCol2 = [
-    "https://i.pinimg.com/236x/81/e6/ce/81e6ce9935e6aff43903bedc35d64754.jpg",
-    "https://static.vecteezy.com/system/resources/previews/008/561/289/non_2x/beauty-woman-fashion-logo-boutique-abstract-design-icon-illustration-vector.jpg",
-    "https://i.pinimg.com/236x/81/e6/ce/81e6ce9935e6aff43903bedc35d64754.jpg",
-    "https://marketplace.canva.com/EAFv_yqJeek/2/0/1600w/canva-black-%26-white-minimalist-signature-personal-brand-logo-XA8Ge8-5GII.jpgg",
+    
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715293/IMG-20251028-WA0045_t8hmfd.jpg",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761717994/Untitled_design_2_aytlxm.png",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715289/IMG-20251028-WA0017_grnugs.jpg",
+    "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715293/IMG-20251028-WA0057_ro5zzn.jpg",
   ];
 
   useEffect(() => {
@@ -176,9 +180,9 @@ const BrandingPageClient = () => {
               </div>
 
               {/* Right - Scrolling Images */}
-              <div className="flex gap-4 overflow-hidden h-[400px] md:h-[600px] relative">
+              <div className="flex gap-2 overflow-hidden  h-[400px] md:h-[600px] relative ">
                 <div
-                  className="flex flex-col gap-4 flex-shrink-0 w-1/2"
+                  className="flex flex-col gap-4  flex-shrink-0 w-1/2"
                   style={{
                     transform: `translateY(-${scrollCol1}%)`,
                     transition: "transform 0.05s linear",
@@ -187,18 +191,18 @@ const BrandingPageClient = () => {
                   {[...rightImagesCol1, ...rightImagesCol1].map((img, idx) => (
                     <div
                       key={idx}
-                      className="w-full h-38 md:h-72 rounded-3xl overflow-hidden flex-shrink-0 aspect-square"
+                      className="w-38 h-38 md:w-70 md:h-70 rounded-3xl overflow-hidden flex-shrink-0 "
                     >
                       <img
                         src={img}
                         alt={`brand-img-col1-${idx}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-fill"
                       />
                     </div>
                   ))}
                 </div>
                 <div
-                  className="flex flex-col gap-4 flex-shrink-0 w-1/2"
+                  className="flex flex-col gap-4  flex-shrink-0 w-1/2"
                   style={{
                     transform: `translateY(-${scrollCol2}%)`,
                     transition: "transform 0.05s linear",
@@ -207,12 +211,12 @@ const BrandingPageClient = () => {
                   {[...rightImagesCol2, ...rightImagesCol2].map((img, idx) => (
                     <div
                       key={idx}
-                      className="w-full h-38 md:h-72 rounded-3xl overflow-hidden flex-shrink-0 aspect-square"
+                      className="w-38 h-38 md:w-70 md:h-70 rounded-3xl overflow-hidden mr-12 flex-shrink-0  "
                     >
                       <img
                         src={img}
                         alt={`brand-img-col2-${idx}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-fill"
                       />
                     </div>
                   ))}
