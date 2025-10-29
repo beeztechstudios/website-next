@@ -81,7 +81,7 @@ const WebDevelopmentPage = () => {
       name: "SaaS Platform ",
       category: "Design & Development",
       image:
-        "https://res.cloudinary.com/dwz07ormq/image/upload/v1761718686/Screenshot_2025-10-29_114735_l548rl.png",
+        "https://res.cloudinary.com/dwz07ormq/image/upload/v1761726748/Screenshot_2025-10-29_135937_zdvsb0.png",
       link: "https://www.ceel.io/",
       result: "120% Increase in Q4 Revenue",
       icon: <Zap className="w-8 h-8 text-blue-600" />,
