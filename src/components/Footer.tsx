@@ -42,9 +42,9 @@ const services: NavLink[] = [
 
 const socialLinks: SocialLink[] = [
     // { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
-    // { name: 'Twitter', icon: Twitter, href: 'https://x.com/Beeztech Studio' },
-    // { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/Beeztech /' },
-    // { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/Beeztech ' },
+    { name: 'Twitter', icon: Twitter, href: 'https://x.com/BeezTechStudio' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/beeztech/' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/beeztech' },
     // { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' }
 ];
 
@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-6">
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
                     <p>
-                        © {new Date().getFullYear()} Beeztech . All rights reserved.
+                        ©2025 Beeztech . All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         {/* 💡 Use Link for Policy pages */}
