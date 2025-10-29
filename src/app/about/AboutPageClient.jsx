@@ -76,7 +76,7 @@ const AboutPageClient = () => {
                     className="relative bg-gray-100 rounded-2xl overflow-hidden shadow-xl"
                   >
                     <img
-                      src="/workspace.jpeg"
+                      src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg"
                       alt="Modern workspace"
                       className="w-full h-auto"
                     />
