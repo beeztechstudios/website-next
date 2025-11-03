@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css"; // global styles
 import Footer from "@/components/Footer";
-
+import Clarity from '@microsoft/clarity';
 
 // Global Metadata for SEO
 // ✅ Improved Global Metadata for Beeztech  
@@ -115,6 +115,7 @@ const websiteSchema = {
 };
 
 export default function RootLayout({ children }) {
+  Clarity.init("u0fu0a675r");
   return (
     <html lang="en" >
       <head>
