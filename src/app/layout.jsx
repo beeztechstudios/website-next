@@ -42,14 +42,14 @@
 //     title: 'Beeztech   – Creative Digital Agency in Udaipur',
 //     description:
 //       'Full-service creative studio offering Branding, Web Development, UI/UX, Digital Marketing, and Media Production. Serving Udaipur, Indore, Gandhinagar, and overseas clients across SaaS, LegalTech, and business industries.',
-    
+
 //   },
 //   twitter: {
 //     card: 'summary_large_image',
 //     title: 'Beeztech | Creative Digital Agency in Udaipur',
 //     description:
 //       'Beeztech is a full-service digital agency for startups and businesses. We offer web development, branding, digital marketing, and product design globally.',
-   
+
 //   },
 //   robots: {
 //     index: true,
@@ -65,7 +65,7 @@
 //   icons: {
 //     icon: '/favicon.ico',
 //     shortcut: '/favicon.ico',
-   
+
 //   },
 //   manifest: '/site.webmanifest',
 //   alternates: {
@@ -115,10 +115,10 @@
 // };
 
 // export default function RootLayout({ children }) {
-  
+
 //   return (
 //     <html lang="en" >
-        
+
 //       <head>
 //         {/* Global meta tags that are safe for all pages */}
 //         <meta charSet="UTF-8" />
@@ -126,7 +126,7 @@
 //         <meta name="author" content="Beeztech  " />
 //         <meta name="robots" content="index, follow" />
 
-        
+
 //         {/* JSON-LD Structured Data */}
 //         <script
 //           type="application/ld+json"
@@ -214,14 +214,14 @@ export const metadata = {
     title: 'Beeztech   – Creative Digital Agency in Udaipur',
     description:
       'Full-service creative studio offering Branding, Web Development, UI/UX, Digital Marketing, and Media Production. Serving Udaipur, Indore, Gandhinagar, and overseas clients across SaaS, LegalTech, and business industries.',
-    
+
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Beeztech | Creative Digital Agency in Udaipur',
     description:
       'Beeztech is a full-service digital agency for startups and businesses. We offer web development, branding, digital marketing, and product design globally.',
-   
+
   },
   robots: {
     index: true,
@@ -237,7 +237,7 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-   
+
   },
   manifest: '/site.webmanifest',
   alternates: {
@@ -287,10 +287,10 @@ const websiteSchema = {
 };
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en" >
-        
+
       <head>
         {/* Global meta tags that are safe for all pages */}
         <meta charSet="UTF-8" />
@@ -298,7 +298,13 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Beeztech  " />
         <meta name="robots" content="index, follow" />
 
-        
+        {/* <!-- Google Tag Manager --> */}
+        <script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MPCBSZQX');</script>
+        {/* <!-- End Google Tag Manager --> */}
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -309,27 +315,31 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
 
-         <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet"
+        />
         <meta name="google-site-verification" content="h8AVtcYpu9JM7KWRC5j7tL6dVHEFS7p8wD_Y1fArAgY" />
       </head>
       <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+        id="microsoft-clarity"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
               (function(c,l,a,r,i,t,y){
                   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                   t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
               })(window, document, "clarity", "script", "u0fu0a675r");
             `,
-          }}
-        />
+        }}
+      />
 
       <body >
+        {/* <!-- Google Tag Manager (noscript) --> */}
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPCBSZQX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{/* <!-- End Google Tag Manager (noscript) --> */}
         {/* Global Navbar */}
         <Navbar />
 

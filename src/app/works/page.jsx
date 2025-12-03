@@ -3,19 +3,27 @@ import React from 'react';
 import PortfolioPage from './Work_client';
 
 export const metadata = {
-  title: 'About Beeztech – Best Branding & Website Development Agency in Udaipur',
+  title: 'Beeztech Portfolio – Case Studies, Branding & Web Development Projects',
   description:
-    'BeezTech is a branding, website development, UI/UX design, and SaaS/MVP development agency based in Udaipur. Learn our mission, process, and why 50+ brands trust us for digital growth.',
-  keywords:
-    'About Beeztech, Branding agency Udaipur, Website development Udaipur, UI UX design Udaipur, App development Udaipur, SaaS development Udaipur, Creative agency Udaipur',
+    'Explore Beeztech’s portfolio showcasing branding, UI/UX design, website development, SaaS products, and digital transformation projects for clients across India and globally.',
   
+  keywords: [
+    'Beeztech portfolio',
+    'branding projects Udaipur',
+    'web development case studies',
+    'UI UX portfolio Udaipur',
+    'SaaS development portfolio',
+    'Beeztech work showcase',
+    'creative agency portfolio'
+  ],
+
   authors: [{ name: 'Beeztech' }],
 
   openGraph: {
-    title: 'About Beeztech – Best Branding & Website Development Agency in Udaipur',
+    title: 'Beeztech Portfolio – Branding, UI/UX & Web Development Case Studies',
     description:
-      'Discover Beeztech — Udaipur’s leading agency for branding, web development, UI/UX design, SaaS & MVP creation, and digital marketing.',
-    url: 'https://www.beeztech.studio/about',
+      'See how Beeztech transforms brands with world-class design, development, and digital strategy. Explore our best work across industries.',
+    url: 'https://www.beeztech.studio/works',
     siteName: 'Beeztech',
     type: 'website',
     images: [
@@ -23,21 +31,23 @@ export const metadata = {
         url: 'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg',
         width: 1200,
         height: 630,
-        alt: 'About Beeztech Branding and Web Development Agency',
+        alt: 'Beeztech Portfolio & Case Studies',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'About Beeztech – Branding & Web Development Agency in Udaipur',
+    title: 'Beeztech Portfolio – Best Branding & Web Development Case Studies',
     description:
-      'Learn about Beeztech’s journey, mission, and expertise in branding, website development, UI/UX, SaaS development, and digital marketing.',
-    images: ['https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg'],
+      'Discover Beeztech’s top branding, UI/UX, SaaS, and website development case studies.',
+    images: [
+      'https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg'
+    ],
   },
 
   alternates: {
-    canonical: 'https://www.beeztech.studio/about',
+    canonical: 'https://www.beeztech.studio/works',
   },
 };
 
