@@ -274,7 +274,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Lightbulb, Users, Award, TrendingUp } from "lucide-react";
+import Image from "next/image";
 import ContactSection from "../../components/ContactSection";
 import DesignProcessSection from "../../components/DesignProcessSection";
 
@@ -282,7 +282,8 @@ const AboutPageClient = () => {
   return (
     <>
       <div className="bg-white mt-10 md:mt-0">
-        {/* Honeycomb Pattern Background */}
+
+        {/* Honeycomb Background */}
         <div className="fixed inset-0 opacity-15 pointer-events-none">
           <div
             className="absolute inset-0"
@@ -295,10 +296,11 @@ const AboutPageClient = () => {
 
         {/* ====================== HERO SECTION ====================== */}
         <section
-          className="bg-white py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden"
           aria-labelledby="about-main-heading"
+          className="bg-white py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden"
         >
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
             {/* ===== LEFT — Visual Section ===== */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -306,34 +308,38 @@ const AboutPageClient = () => {
               viewport={{ once: true }}
               className="relative order-2 lg:order-1"
             >
-              {/* Decorative Elements */}
+              {/* Decorative Shapes */}
               <div className="absolute top-0 left-0 w-32 h-32 border-2 border-orange-200 rounded-3xl -z-10" />
               <div className="absolute -top-8 -left-8 w-20 h-20 bg-orange-100 rounded-full -z-20" />
 
-              {/* Hero Image */}
+              {/* ⭐ MAIN HERO IMAGE (LCP) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="relative bg-gray-100 rounded-2xl overflow-hidden shadow-xl"
               >
-                <img
+                <Image
                   src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg"
                   alt="Modern workspace at Beeztech Studio"
-                  loading="lazy"
-                  className="w-full h-auto"
+                  width={1400}
+                  height={800}
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-auto object-cover"
                 />
 
                 {/* Floating Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl shadow-lg px-6 py-4 flex items-center gap-3"
+                  className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-lg px-6 py-4 flex items-center gap-3"
                 >
                   <div className="flex -space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-orange-400" role="presentation"></div>
-                    <div className="w-8 h-8 rounded-full bg-purple-400" role="presentation"></div>
-                    <div className="w-8 h-8 rounded-full bg-yellow-400" role="presentation"></div>
+                    <span className="w-8 h-8 rounded-full bg-orange-400" />
+                    <span className="w-8 h-8 rounded-full bg-purple-400" />
+                    <span className="w-8 h-8 rounded-full bg-yellow-400" />
                   </div>
+
                   <div className="space-y-1">
                     <div className="w-12 h-2 bg-orange-200 rounded-full"></div>
                     <div className="w-16 h-2 bg-orange-200 rounded-full"></div>
@@ -341,23 +347,25 @@ const AboutPageClient = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Team Member Image */}
+              {/* ⭐ TEAM MEMBER IMAGE (Small, optimized) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="absolute -bottom-8 -left-8 w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-8 border-white shadow-xl bg-orange-400"
               >
-                <img
+                <Image
                   src="https://framerusercontent.com/images/EtyhVt5k6VdQGzImZKutvGH8I.png"
                   alt="Beeztech team member portrait"
-                  loading="lazy"
+                  width={310}
+                  height={310}
+                  sizes="(max-width: 768px) 128px, 192px"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
 
               <div
                 className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-orange-200 rounded-full -z-10"
-                role="presentation"
+                aria-hidden="true"
               />
             </motion.div>
 
@@ -371,7 +379,6 @@ const AboutPageClient = () => {
                 ABOUT
               </span>
 
-              {/* ⭐ MAIN SEO H1 */}
               <h1
                 id="about-main-heading"
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
@@ -380,16 +387,14 @@ const AboutPageClient = () => {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                We’re a creative tech agency turning bold ideas into powerful digital experiences
-                that inspire, engage, and grow brands.
+                We’re a creative tech agency turning bold ideas into powerful digital experiences that inspire, engage, and grow brands.
               </p>
 
               <p className="text-base text-gray-500 leading-relaxed">
-                At BeezTech, we blend creativity, technology, and strategy to craft digital
-                solutions that stand out. From startups to enterprises, our team transforms concepts
-                into compelling brands through design, development, and innovation.
+                At BeezTech, we blend creativity, technology, and strategy to craft digital solutions that stand out.
               </p>
             </motion.div>
+
           </div>
         </section>
 
@@ -408,19 +413,16 @@ const AboutPageClient = () => {
                 </p>
 
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                  What began as a small initiative has evolved into a full-fledged digital studio
-                  driven by innovation, design, and purpose.
+                  What began as a small initiative has evolved into a full-fledged digital studio driven by innovation, design, and purpose.
                 </p>
 
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                  Our name reflects our philosophy — a hive where design, development, and strategy
-                  combine to create impactful, scalable, and timeless digital experiences.
+                  Our name reflects our philosophy — a hive where design, development, and strategy combine to create impactful experiences.
                 </p>
 
                 <div className="pt-4 border-l-4 border-orange-500 pl-6">
                   <p className="text-lg sm:text-xl text-gray-700 leading-relaxed italic">
-                    Our mission is simple — to give every client a global presence that inspires
-                    trust, creativity, and growth.
+                    Our mission is simple — to give every client a global presence that inspires trust, creativity, and growth.
                   </p>
                 </div>
               </div>
