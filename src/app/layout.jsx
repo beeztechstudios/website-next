@@ -299,7 +299,7 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index, follow" />
 
         {/* <!-- Google Tag Manager --> */}
-        <Script
+        {/* <Script
           id="google-tag-manager"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -315,7 +315,7 @@ export default function RootLayout({ children }) {
       })(window,document,'script','dataLayer','GTM-MPCBSZQX');
     `,
           }}
-        />
+        /> */}
 
 
         {/* <!-- End Google Tag Manager --> */}
@@ -351,8 +351,8 @@ export default function RootLayout({ children }) {
 
       <body >
         {/* <!-- Google Tag Manager (noscript) --> */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPCBSZQX"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPCBSZQX"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> */}
         {/* <!-- End Google Tag Manager (noscript) --> */}
         {/* Global Navbar */}
         <Navbar />
