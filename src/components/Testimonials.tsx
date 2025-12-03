@@ -342,3 +342,263 @@ const TestimonialsSection: React.FC = () => {
 };
 
 export default TestimonialsSection;
+// 'use client';
+
+// import React, { useState, useEffect, useRef } from "react";
+// import {
+//     motion,
+//     AnimatePresence,
+//     useMotionValue,
+//     useTransform,
+//     animate,
+//     useInView,
+// } from "framer-motion";
+// import Image from "next/image";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// // -----------------------------------------
+// // ⭐ Animated Number Component (Optimized)
+// // -----------------------------------------
+// const AnimatedNumber = ({ value, label, delay = 0 }) => {
+//     const ref = useRef(null);
+//     const isInView = useInView(ref, { once: true, amount: 0.4 });
+
+//     const count = useMotionValue(0);
+//     const [displayValue, setDisplayValue] = useState("0");
+
+//     const rounded = useTransform(count, (latest) => {
+//         const roundedValue = Math.round(latest);
+
+//         if (value.includes("%")) return `${roundedValue}%`;
+//         if (value.includes("M")) return `${roundedValue}M`;
+//         if (value.includes("+")) return `${roundedValue}+`;
+
+//         return String(roundedValue);
+//     });
+
+//     useEffect(() => {
+//         const unsub = rounded.on("change", (v) => setDisplayValue(v));
+//         return () => unsub();
+//     }, [rounded]);
+
+//     useEffect(() => {
+//         if (isInView) {
+//             const numeric = parseInt(value.replace(/[^\d]/g, ""));
+//             const controls = animate(count, numeric, {
+//                 duration: 2,
+//                 delay,
+//                 ease: "easeOut",
+//             });
+//             return () => controls.stop();
+//         }
+//     }, [isInView]);
+
+//     return (
+//         <div ref={ref} className="mb-8 sm:mb-12">
+//             <motion.div
+//                 className="text-6xl lg:text-[60px] font-bold mb-2 text-white"
+//                 initial={{ opacity: 0, y: 20 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 viewport={{ once: true }}
+//                 transition={{ duration: 0.6, delay }}
+//             >
+//                 {displayValue}
+//             </motion.div>
+//             <motion.div
+//                 className="text-sm lg:text-[14px] text-gray-300"
+//                 initial={{ opacity: 0 }}
+//                 whileInView={{ opacity: 1 }}
+//                 viewport={{ once: true }}
+//                 transition={{ duration: 0.6, delay: delay + 0.2 }}
+//             >
+//                 {label}
+//             </motion.div>
+//         </div>
+//     );
+// };
+
+// // -----------------------------------------
+// // ⭐ Testimonials Section (Optimized)
+// // -----------------------------------------
+// const TestimonialsSection = () => {
+//     const [index, setIndex] = useState(0);
+
+//     const testimonials = [
+//         {
+//             id: 1,
+//             quote:
+//                 "The team understood our vision deeply and created a brand that feels both powerful and spiritual.",
+//             author: "Founder, TARAKSH",
+//             position: "TARAKSH International Law Firm",
+//             image:
+//                 "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+//         },
+//         {
+//             id: 2,
+//             quote:
+//                 "From brand identity to website launch, everything was handled flawlessly.",
+//             author: "CEO, HiLe",
+//             position: "Hiring for Legal",
+//             image:
+//                 "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+//         },
+//         {
+//             id: 3,
+//             quote:
+//                 "They transformed our business vision into a strong brand and seamless digital experience.",
+//             author: "Managing Director",
+//             position: "Merchant Xporters Pvt. Ltd.",
+//             image:
+//                 "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+//         },
+//         {
+//             id: 4,
+//             quote:
+//                 "The creative and strategic approach made all the difference.",
+//             author: "Head of Marketing",
+//             position: "Alliedge Healthcare",
+//             image:
+//                 "https://framerusercontent.com/images/nURHcgFo9S6zVF3j0ly85sSmvE.png",
+//         },
+//     ];
+
+//     const stats = [
+//         { number: "45+", label: "Finalized Projects" },
+//         { number: "98%", label: "Client satisfaction rate" },
+//         { number: "8M", label: "Gross Revenue" },
+//     ];
+
+//     // Autoplay
+//     useEffect(() => {
+//         const id = setInterval(
+//             () => setIndex((i) => (i + 1) % testimonials.length),
+//             5000
+//         );
+//         return () => clearInterval(id);
+//     }, []);
+
+//     const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
+//     const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+
+//     return (
+//         <section
+//             aria-labelledby="testimonials-heading"
+//             className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-16 bg-white relative"
+//         >
+//             <div className="max-w-7xl mx-auto">
+
+//                 {/* Label */}
+//                 <span className="text-orange-500 font-semibold text-sm md:text-lg uppercase">
+//                     Testimonials
+//                 </span>
+
+//                 {/* ⭐ H2 Heading */}
+//                 <h2
+//                     id="testimonials-heading"
+//                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight mt-3"
+//                 >
+//                     Why Brands Trust Us
+//                 </h2>
+
+//                 {/* --------------------------------------
+//                     Layout Grid
+//                 -------------------------------------- */}
+//                 <div className="grid lg:grid-cols-3 gap-8 mt-14">
+
+//                     {/* LEFT — Stats Card */}
+//                     <motion.div
+//                         initial={{ opacity: 0, x: -40 }}
+//                         whileInView={{ opacity: 1, x: 0 }}
+//                         viewport={{ once: true }}
+//                         transition={{ duration: 0.7 }}
+//                         className="bg-black rounded-2xl p-10 relative overflow-hidden"
+//                     >
+//                         <Image
+//                             src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026417/testimonial_yuuyjn.jpg"
+//                             alt="background texture"
+//                             fill
+//                             sizes="100vw"
+//                             className="object-cover opacity-10"
+//                         />
+
+//                         <div className="relative z-10 mt-6">
+//                             {stats.map((s, i) => (
+//                                 <AnimatedNumber
+//                                     key={i}
+//                                     value={s.number}
+//                                     label={s.label}
+//                                     delay={i * 0.3}
+//                                 />
+//                             ))}
+//                         </div>
+//                     </motion.div>
+
+//                     {/* RIGHT — Testimonial Slider */}
+//                     <div className="lg:col-span-2 h-[460px] bg-black rounded-3xl overflow-hidden relative">
+                        
+//                         <AnimatePresence mode="wait">
+
+//                             <motion.div
+//                                 key={index}
+//                                 initial={{ opacity: 0 }}
+//                                 animate={{ opacity: 1 }}
+//                                 exit={{ opacity: 0 }}
+//                                 transition={{ duration: 0.5 }}
+//                                 className="absolute inset-0"
+//                                 aria-live="polite"
+//                             >
+//                                 <Image
+//                                     src={testimonials[index].image}
+//                                     alt={testimonials[index].author}
+//                                     fill
+//                                     sizes="100vw"
+//                                     className="object-cover"
+//                                 />
+
+//                                 {/* Gradient overlay */}
+//                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
+
+//                                 {/* Content */}
+//                                 <div className="absolute inset-0 flex flex-col justify-between p-10 z-20">
+//                                     <p className="text-white/70 text-sm">{String(index + 1).padStart(2,"0")} / {String(testimonials.length).padStart(2,"0")}</p>
+
+//                                     <blockquote className="text-2xl sm:text-3xl lg:text-[28px] font-bold text-white leading-snug">
+//                                         “{testimonials[index].quote}”
+//                                     </blockquote>
+
+//                                     <div>
+//                                         <p className="text-white font-semibold text-lg">
+//                                             {testimonials[index].author}
+//                                         </p>
+//                                         <p className="text-gray-300">{testimonials[index].position}</p>
+//                                     </div>
+//                                 </div>
+//                             </motion.div>
+//                         </AnimatePresence>
+
+//                         {/* Controls */}
+//                         <div className="absolute bottom-6 right-6 flex gap-3 z-30">
+//                             <button
+//                                 onClick={prev}
+//                                 aria-label="Previous testimonial"
+//                                 className="w-12 h-12 bg-white/10 border border-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20"
+//                             >
+//                                 <ChevronLeft className="w-6 h-6" />
+//                             </button>
+//                             <button
+//                                 onClick={next}
+//                                 aria-label="Next testimonial"
+//                                 className="w-12 h-12 bg-white/10 border border-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20"
+//                             >
+//                                 <ChevronRight className="w-6 h-6" />
+//                             </button>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//             </div>
+//         </section>
+//     );
+// };
+
+// export default TestimonialsSection;

@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.jsx", "src/app/layout.jsx", "src/app/services/branding/page.jsx", "src/app/services/media-production/page.jsx", "src/app/services/web-app-development/page.jsx", "src/app/works/page.jsx", "src/app/about/page.jsx", "src/app/services/digital-marketing/page.jsx", "src/app/book-call/page.jsx", "src/app/blogs/page.jsx", "src/app/blogs/[slug]/page.jsx", "src/app/api/submit-inquiry/route.ts", "src/app/services/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.jsx", "src/app/layout.jsx", "src/app/services/branding/page.jsx", "src/app/services/media-production/page.jsx", "src/app/services/web-app-development/page.jsx", "src/app/works/work.tsx", "src/app/about/page.jsx", "src/app/services/digital-marketing/page.jsx", "src/app/book-call/page.jsx", "src/app/blogs/page.jsx", "src/app/blogs/[slug]/page.jsx", "src/app/api/submit-inquiry/route.ts", "src/app/services/page.jsx"],
   "exclude": ["node_modules"]
 }
