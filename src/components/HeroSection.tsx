@@ -266,17 +266,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToServices }) => {
               />
 
               {/* ⭐ Optimized LCP Image */}
-              <div className="relative z-10 w-full animate-floating-slow">
-  <Image
-    src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026415/hero_img_eeujut.png"
-    alt="Creative digital branding and web development hero illustration"
-    width={700}
-    height={700}
-    priority
-    fetchPriority="high"   // ⭐ REQUIRED for passing Lighthouse LCP audit
-    className="w-full h-auto max-w-md mx-auto drop-shadow-2xl"
-  />
-</div>
+              <motion.div
+                className="relative z-10 w-full"
+                animate={{ y: [-12, 12, -12] }}
+                transition={{ duration: 4 , repeat: Infinity, ease: "easeInOut" }}
+              >
+                <Image
+                  src="https://res.cloudinary.com/dwz07ormq/image/upload/f_auto,q_auto,w_450/v1760026415/hero_img_eeujut.png"
+                  alt="Creative digital branding and web development hero illustration"
+                  width={700}
+                  height={700}
+                  priority // ⭐ Forces LCP optimization
+                  className="w-full h-auto max-w-md mx-auto drop-shadow-2xl"
+                />
+              </motion.div>
 
             </div>
           </div>

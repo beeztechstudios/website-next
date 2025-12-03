@@ -268,7 +268,7 @@ const portfolioItems: PortfolioItem[] = [
     title: 'TARAKSH',
     category: 'Brand Identity',
     image:
-      'https://res.cloudinary.com/dwz07ormq/image/upload/v1761583136/taraksh_yoxxzb.jpg',
+      'https://res.cloudinary.com/dwz07ormq/image/upload/f_auto,q_auto,w_450/v1761583136/taraksh_yoxxzb.jpg',
     challenge:
       'TARAKSH, an international law firm operating in Dubai and India, wanted a timeless brand identity that reflected excellence and deep-rooted spiritual values.',
     solution:
@@ -286,7 +286,7 @@ const portfolioItems: PortfolioItem[] = [
     title: 'HiLe',
     category: 'Brand Identity & Development',
     image:
-      'https://res.cloudinary.com/dwz07ormq/image/upload/v1761583165/hile_ry2wdg.png',
+      'https://res.cloudinary.com/dwz07ormq/image/upload/f_auto,q_auto,w_450/v1761583165/hile_ry2wdg.png',
     challenge:
       'HiLe needed a complete brand and digital platform for their legal HR technology product.',
     solution:
@@ -304,7 +304,7 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Merchant Xporters',
     category: 'Brand Identity & Web Development',
     image:
-      'https://res.cloudinary.com/dwz07ormq/image/upload/v1761583148/mercentexporter_geekok.jpg',
+      'https://res.cloudinary.com/dwz07ormq/image/upload/f_auto,q_auto,w_450/v1761583148/mercentexporter_geekok.jpg',
     challenge:
       'Needed a strong identity & website to reflect global operations and trustworthiness.',
     solution:
@@ -322,7 +322,7 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Alliedge Healthcare',
     category: 'Brand Identity & Web Design',
     image:
-      'https://res.cloudinary.com/dwz07ormq/image/upload/v1761583130/alliedge_k4s1mq.png',
+      'https://res.cloudinary.com/dwz07ormq/image//upload/f_auto,q_auto,w_450/v1761583130/alliedge_k4s1mq.png',
     challenge:
       'Leading SaaS healthcare provider needed a modern brand identity balancing innovation & approachability.',
     solution:

@@ -291,7 +291,7 @@ const AboutUsSection = () => {
               className="relative bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl overflow-hidden shadow-2xl ring-4 ring-orange-100/50"
             >
               <Image
-                src="https://res.cloudinary.com/dwz07ormq/image/upload/v1760026418/workspace_fzoeje.jpg"
+                src="https://res.cloudinary.com/dwz07ormq/image/upload/f_auto,q_auto,w_450/v1760026418/workspace_fzoeje.jpg"
                 alt="Beeztech Studio creative workspace area"
                 width={700}
                 height={500}
