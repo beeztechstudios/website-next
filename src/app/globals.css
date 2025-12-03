@@ -29,3 +29,12 @@ html,
 body {
   overflow-x: hidden !important;
 }
+@keyframes floating-slow {
+  0% { transform: translateY(-12px); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(-12px); }
+}
+
+.animate-floating-slow {
+  animation: floating-slow 10s ease-in-out infinite;
+}
