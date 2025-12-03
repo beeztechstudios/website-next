@@ -301,6 +301,27 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="h8AVtcYpu9JM7KWRC5j7tL6dVHEFS7p8wD_Y1fArAgY"
         />
+
+         {/*  ✅ GOOGLE ANALYTICS (gtag.js) */}
+        {/* ------------------------------ */}
+        <Script
+          id="ga-script"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q49VXJBSLN"
+        />
+
+        <Script
+          id="ga-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Q49VXJBSLN');
+            `,
+          }}
+        />
       </head>
 
       {/* Insert GTM + Clarity using next/script (safe) */}
