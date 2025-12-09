@@ -152,12 +152,6 @@ const Footer: React.FC = () => {
                                 </span>
                             </li>
                             {/* Phone Number */}
-                            <li className="flex items-center gap-3 text-gray-400 text-sm">
-                                <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                                <a href="tel:+917877571101" className="hover:text-orange-500 transition-colors">
-                                    +917877571101
-                                </a>
-                            </li>
                             {/* Email Address */}
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
