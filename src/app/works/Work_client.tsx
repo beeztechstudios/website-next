@@ -474,19 +474,19 @@ const PortfolioPage = () => {
   // Portfolio Data
   // ---------------------------------------------------
   const portfolioItems: PortfolioItem[] = [
-    {
-      id: 1,
-      title: "TARAKSH",
-      category: "Brand Identity",
-      image:
-        "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583136/taraksh_yoxxzb.jpg",
-      challenge:
-        "TARAKSH needed a timeless identity reflecting professionalism + spiritual values across digital touchpoints.",
-      solution:
-        "Designed a symbol combining purity, balance, justice & devotion. Extended identity to stationery and website.",
-      results: ["Meaningful identity", "Consistent system", "High client praise"],
-      techStack: ["Illustrator", "Photoshop", "Figma"],
-    },
+    // {
+    //   id: 1,
+    //   title: "TARAKSH",
+    //   category: "Brand Identity",
+    //   image:
+    //     "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583136/taraksh_yoxxzb.jpg",
+    //   challenge:
+    //     "TARAKSH needed a timeless identity reflecting professionalism + spiritual values across digital touchpoints.",
+    //   solution:
+    //     "Designed a symbol combining purity, balance, justice & devotion. Extended identity to stationery and website.",
+    //   results: ["Meaningful identity", "Consistent system", "High client praise"],
+    //   techStack: ["Illustrator", "Photoshop", "Figma"],
+    // },
 
     {
       id: 2,
@@ -506,18 +506,18 @@ const PortfolioPage = () => {
       techStack: ["Figma", "Next.js", "Tailwind"],
     },
 
-    {
-      id: 3,
-      title: "Merchant Xporters",
-      category: "Brand Identity & Web Development",
-      image:
-        "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583148/mercentexporter_geekok.jpg",
-      challenge: "Needed global appeal + strong digital presence.",
-      solution:
-        "Created dynamic identity and responsive website representing forward movement & global connectivity.",
-      results: ["Modern identity", "Client engagement up", "Global-ready brand"],
-      techStack: ["Figma", "Next.js", "Tailwind"],
-    },
+    // {
+    //   id: 3,
+    //   title: "Merchant Xporters",
+    //   category: "Brand Identity & Web Development",
+    //   image:
+    //     "https://res.cloudinary.com/dwz07ormq/image/upload/v1761583148/mercentexporter_geekok.jpg",
+    //   challenge: "Needed global appeal + strong digital presence.",
+    //   solution:
+    //     "Created dynamic identity and responsive website representing forward movement & global connectivity.",
+    //   results: ["Modern identity", "Client engagement up", "Global-ready brand"],
+    //   techStack: ["Figma", "Next.js", "Tailwind"],
+    // },
 
     {
       id: 4,
