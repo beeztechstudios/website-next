@@ -57,7 +57,7 @@ const BeezTechBlogPageClient = () => {
                                 {featuredPost.title}
                             </h2>
 
-                            <p className="text-sm sm:text-md text-gray-600 font-medium leading-relaxed mb-6">
+                            <p className="text-xs sm:text-md text-gray-600 font-medium leading-relaxed mb-6">
                                 {featuredPost.excerpt}
                             </p>
 
@@ -106,7 +106,7 @@ const BeezTechBlogPageClient = () => {
                                     </Link>
                                 </h3>
 
-                                <p className="text-gray-600 text-sm font-medium line-clamp-3 mb-5 leading-relaxed">
+                                <p className="text-gray-600 text-xs font-medium line-clamp-3 mb-5 leading-relaxed">
                                     {post.excerpt}
                                 </p>
 
