@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 // Generate metadata for SEO
 // ✅ Generate metadata for each blog post
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const post = beezTechBlogPosts.find(p => p.slug === slug);
 
   if (!post) {
@@ -75,8 +75,8 @@ export async function generateMetadata({ params }) {
 }
 
 
-export default function BlogDetailPage({ params }) {
-  const { slug } = params;
+export default async function BlogDetailPage({ params }) {
+  const { slug } = await params;
   const post = beezTechBlogPosts.find(p => p.slug === slug);
 
   if (!post)
@@ -141,7 +141,7 @@ export default function BlogDetailPage({ params }) {
             {post.title}
           </h1>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-600">
-            <span className="font-semibold text-yellow-600">{post.category}</span>
+           
             <span className="flex items-center">
               <Clock className="w-4 h-4 mr-1" /> {post.readingTime}
             </span>
@@ -152,9 +152,7 @@ export default function BlogDetailPage({ params }) {
 
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="mb-10 rounded-xl overflow-hidden shadow-xl">
-          <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-            <span className="text-gray-500 text-xl">Cover Image Placeholder</span>
-          </div>
+         <img src={post.image} alt="" />
         </div>
 
         <div className="flex items-center space-x-4 mb-12 pb-4 border-b border-gray-100">

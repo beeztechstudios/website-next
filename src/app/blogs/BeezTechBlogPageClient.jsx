@@ -6,18 +6,22 @@ import Link from 'next/link';
 
 const categories = [
     { name: 'All', icon: Zap },
-    { name: 'Product & Startup Insights', icon: TrendingUp },
-    { name: 'Technology & Development', icon: Code },
-    { name: 'Design & User Experience', icon: Palette },
-    { name: 'Growth & Retention', icon: TrendingUp },
+    // { name: 'Product & Startup Insights', icon: TrendingUp },
+    // { name: 'Technology & Development', icon: Code },
+    // { name: 'Design & User Experience', icon: Palette },
+    // { name: 'Growth & Retention', icon: TrendingUp },
 ];
 
 const BeezTechBlogPageClient = () => {
     const [filter, setFilter] = useState('All');
 
-    const filteredPosts = filter === 'All' 
-        ? beezTechBlogPosts 
-        : beezTechBlogPosts.filter(post => post.category === filter);
+    const filteredPosts =
+        filter === 'All'
+            ? [...beezTechBlogPosts]
+                .sort((a, b) => b.id - a.id) // 👈 latest first
+            : beezTechBlogPosts
+                .filter(post => post.category === filter)
+                .sort((a, b) => b.id - a.id);
 
     const categoriesMap = {
         'Product & Startup Insights': 'bg-green-100 text-green-800',
@@ -79,10 +83,9 @@ const BeezTechBlogPageClient = () => {
                         filteredPosts.map((post) => (
                             <article key={post.id} className="group flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <div className="w-full h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden">
-                                    <span className="text-gray-500 text-sm">Image for {post.category}</span>
-                                    <div className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded-full ${categoriesMap[post.category] || 'bg-gray-200 text-gray-800'}`}>
-                                        {post.category}
-                                    </div>
+                                   
+                                    <img src= {post.image} alt="" />
+                                    
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <p className="text-sm text-gray-500 mb-2">{post.date} · {post.readingTime}</p>
