@@ -1,24 +1,42 @@
 import { ArrowLeft, Clock } from 'lucide-react';
 import ContentRenderer from '../../../components/Blogs/BeezTechContentRenderer';
-import { beezTechBlogPosts } from '../../../components/Blogs/BeezTechBlogData';
+import { client, urlFor } from '../../../lib/sanity';
+import { groq } from 'next-sanity';
 import Link from 'next/link';
 
-// Related posts helper
-const getRelatedPosts = (currentPostId, currentCategory) =>
-  beezTechBlogPosts
-    .filter(p => p.id !== currentPostId && p.category === currentCategory)
-    .slice(0, 3);
+// Related posts helper - now using Sanity query
+async function getRelatedPosts(currentPostId, currentCategory) {
+  const query = groq`*[_type == "post" && _id != $currentPostId && category == $currentCategory][0...3] {
+    _id,
+    title,
+    slug,
+    date,
+    readingTime,
+    image
+  }`;
+  return client.fetch(query, { currentPostId, currentCategory });
+}
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  return beezTechBlogPosts.map(post => ({ slug: post.slug }));
+  const query = groq`*[_type == "post"] { slug }`;
+  const posts = await client.fetch(query);
+  return posts.map(post => ({ slug: post.slug.current }));
 }
 
-// Generate metadata for SEO
-// ✅ Generate metadata for each blog post
+// Generate metadata for each blog post
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const post = beezTechBlogPosts.find(p => p.slug === slug);
+  const query = groq`*[_type == "post" && slug.current == $slug][0] {
+    title,
+    excerpt,
+    keywords,
+    author,
+    date,
+    meta,
+    image
+  }`;
+  const post = await client.fetch(query, { slug });
 
   if (!post) {
     return {
@@ -29,11 +47,10 @@ export async function generateMetadata({ params }) {
   }
 
   const fullUrl = `https://www.beeztech.studio/blogs/${slug}`;
-  // const ogImage = post.image || 'https://www.beeztech.studio/images/og-blogs.png';
 
   return {
-    title: `${post.title} | BeezTech Studio Blog`,
-    description: post.excerpt || post.title,
+    title: `${post.meta?.title || post.title} | BeezTech Studio Blog`,
+    description: post.meta?.description || post.excerpt || post.title,
     keywords: post.keywords?.join(', ') || 'BeezTech Studio Blog, branding, design, marketing, Udaipur',
     authors: [{ name: post.author || 'BeezTech Studio' }],
     openGraph: {
@@ -43,22 +60,12 @@ export async function generateMetadata({ params }) {
       url: fullUrl,
       siteName: 'BeezTech Studio',
       publishedTime: post.date,
-      modifiedTime: post.updatedAt || post.date,
       authors: [post.author],
-      // images: [
-      //   {
-      //     url: ogImage,
-      //     width: 1200,
-      //     height: 630,
-      //     alt: `${post.title} - BeezTech Studio Blog`,
-      //   },
-      // ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${post.title} | BeezTech Studio Blog`,
       description: post.excerpt || post.title,
-      // images: [ogImage],
       creator: '@beeztechstudio',
     },
     alternates: {
@@ -77,7 +84,21 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogDetailPage({ params }) {
   const { slug } = await params;
-  const post = beezTechBlogPosts.find(p => p.slug === slug);
+  const query = groq`*[_type == "post" && slug.current == $slug][0] {
+    _id,
+    title,
+    category,
+    author,
+    readingTime,
+    date,
+    image,
+    content[] {
+      ...,
+      "type": _type
+    },
+    keywords
+  }`;
+  const post = await client.fetch(query, { slug });
 
   if (!post)
     return (
@@ -86,19 +107,12 @@ export default async function BlogDetailPage({ params }) {
       </div>
     );
 
-  const relatedPosts = getRelatedPosts(post.id, post.category);
-  const articleSchema = { /* ... same as before */ };
+  const relatedPosts = await getRelatedPosts(post._id, post.category);
 
   return (
     <div className="bg-white min-h-screen font-sans antialiased text-gray-900">
-      {/* JSON-LD structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-
       {/* Navigation / Back Button */}
-      <nav className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
+      <nav className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <Link
           href="/blogs"
           className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-orange-600 transition-colors"
@@ -129,11 +143,11 @@ export default async function BlogDetailPage({ params }) {
         </div>
       </header>
 
-      {/* Hero Image - Slightly wider than text for visual impact */}
+      {/* Hero Image */}
       <div className="max-w-5xl mx-auto px-4 mb-16">
-        <div className="aspect-video relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200">
+        <div className="aspect-1200/630 relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200">
           <img
-            src={post.image}
+            src={post.image?.asset ? urlFor(post.image).url() : post.image}
             alt={post.title}
             className="w-full h-full object-cover"
           />
@@ -143,26 +157,25 @@ export default async function BlogDetailPage({ params }) {
       {/* Main Content Body */}
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <article className="prose prose-slate lg:prose-xl prose-headings:font-bold prose-headings:tracking-tight prose-a:text-orange-600 hover:prose-a:text-orange-500 prose-img:rounded-xl">
-          {/* Note: ContentRenderer should output standard HTML tags 
-            (p, h2, h3, etc.) to benefit from the 'prose' styles.
-          */}
           <ContentRenderer content={post.content} />
         </article>
 
         {/* SEO Tag Section */}
-        <footer className="mt-16 pt-8 border-t border-gray-100">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Tags</h3>
-          <div className="flex flex-wrap gap-2">
-            {post.keywords.map((tag, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 text-sm text-gray-600 bg-gray-50 rounded-md border border-gray-100 hover:bg-orange-50 hover:text-orange-600 transition-colors cursor-default"
-              >
-                #{tag.replace(/\s+/g, '')}
-              </span>
-            ))}
-          </div>
-        </footer>
+        {post.keywords && (
+          <footer className="mt-16 pt-8 border-t border-gray-100">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Tags</h3>
+            <div className="flex flex-wrap gap-2">
+              {post.keywords.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-sm text-gray-600 bg-gray-50 rounded-md border border-gray-100 hover:bg-orange-50 hover:text-orange-600 transition-colors cursor-default"
+                >
+                  #{tag.replace(/\s+/g, '')}
+                </span>
+              ))}
+            </div>
+          </footer>
+        )}
       </main>
 
       {/* Related Posts Section */}
@@ -178,12 +191,16 @@ export default async function BlogDetailPage({ params }) {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map(rPost => (
                 <Link
-                  key={rPost.id}
-                  href={`/blogs/${rPost.slug}`}
+                  key={rPost._id}
+                  href={`/blogs/${rPost.slug.current}`}
                   className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="aspect-video overflow-hidden">
-                    <img src={rPost.image} alt={rPost.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="aspect-1200/630 overflow-hidden">
+                    <img
+                      src={rPost.image?.asset ? urlFor(rPost.image).url() : rPost.image}
+                      alt={rPost.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-2">

@@ -3,10 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
-import { beezTechBlogPosts } from "../../components/Blogs/BeezTechBlogData";
+import { urlFor } from "../../lib/sanity";
 
-const BeezTechBlogPageClient = () => {
-    const posts = [...beezTechBlogPosts].sort((a, b) => b.id - a.id);
+const BeezTechBlogPageClient = ({ posts = [] }) => {
     const featuredPost = posts[0];
     const remainingPosts = posts.slice(1);
 
@@ -15,8 +14,6 @@ const BeezTechBlogPageClient = () => {
             {/* HERO */}
             <section className="pt-32 pb-8 px-4 sm:px-6 lg:px-16 bg-white">
                 <div className="max-w-6xl mx-auto text-center">
-                   
-
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
                         Thoughts, Ideas &
                         <span className="block text-orange-500">Digital Perspectives</span>
@@ -36,12 +33,12 @@ const BeezTechBlogPageClient = () => {
                         Featured Article
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <div className="h-full">
+                    <div className="grid lg:grid-cols-2 gap-10 items-center bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                        <div className="relative w-full aspect-1200/630">
                             <img
-                                src={featuredPost.image}
+                                src={featuredPost.image?.asset ? urlFor(featuredPost.image).url() : featuredPost.image}
                                 alt={featuredPost.title}
-                                className="w-full h-full min-h-[300px] object-cover"
+                                className="absolute inset-0 w-full h-full object-cover"
                             />
                         </div>
 
@@ -62,7 +59,7 @@ const BeezTechBlogPageClient = () => {
                             </p>
 
                             <Link
-                                href={`/blogs/${featuredPost.slug}`}
+                                href={`/blogs/${featuredPost.slug?.current || featuredPost.slug}`}
                                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg"
                             >
                                 Read Full Article
@@ -84,11 +81,11 @@ const BeezTechBlogPageClient = () => {
                             key={post.id}
                             className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-2"
                         >
-                            <div className="overflow-hidden">
+                            <div className="overflow-hidden aspect-1200/630">
                                 <img
-                                    src={post.image}
+                                    src={post.image?.asset ? urlFor(post.image).url() : post.image}
                                     alt={post.title}
-                                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
 
@@ -101,7 +98,7 @@ const BeezTechBlogPageClient = () => {
                                 </div>
 
                                 <h3 className="text-xl font-extrabold leading-snug mb-3 text-gray-900 group-hover:text-orange-500 transition-colors">
-                                    <Link href={`/blogs/${post.slug}`}>
+                                    <Link href={`/blogs/${post.slug?.current || post.slug}`}>
                                         {post.title}
                                     </Link>
                                 </h3>
@@ -111,7 +108,7 @@ const BeezTechBlogPageClient = () => {
                                 </p>
 
                                 <Link
-                                    href={`/blogs/${post.slug}`}
+                                    href={`/blogs/${post.slug?.current || post.slug}`}
                                     className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold text-sm group-hover:gap-3 transition-all"
                                 >
                                     Read More

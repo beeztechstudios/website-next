@@ -62,8 +62,34 @@ export const metadata = {
 
 
 
- 
 
-export default function BeezTechBlogPage() {
-  return <BeezTechBlogPageClient />;
+
+import { client } from '../../lib/sanity';
+import { groq } from 'next-sanity';
+
+async function getPosts() {
+  const query = groq`*[_type == "post"] | order(_id desc) {
+    _id,
+    id,
+    title,
+    slug,
+    date,
+    readingTime,
+    category,
+    excerpt,
+    image,
+    author,
+    keywords,
+    meta,
+    content[] {
+      ...,
+      "type": _type
+    }
+  }`;
+  return client.fetch(query, {}, { next: { revalidate: 60 } });
+}
+
+export default async function BeezTechBlogPage() {
+  const posts = await getPosts();
+  return <BeezTechBlogPageClient posts={posts} />;
 }
