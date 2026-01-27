@@ -14,7 +14,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
-import ContactSection from "../../../components/ContactSection";
+import ContactSection from "@/components/ContactSection";
 
 const BrandingPageClient = () => {
   const [scrollCol1, setScrollCol1] = useState(0);
@@ -33,7 +33,7 @@ const BrandingPageClient = () => {
   ];
 
   const rightImagesCol2 = [
-    
+
     "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715293/IMG-20251028-WA0045_t8hmfd.jpg",
     "https://res.cloudinary.com/dwz07ormq/image/upload/v1761717994/Untitled_design_2_aytlxm.png",
     "https://res.cloudinary.com/dwz07ormq/image/upload/v1761715289/IMG-20251028-WA0017_grnugs.jpg",
@@ -131,7 +131,7 @@ const BrandingPageClient = () => {
 
   return (
     <>
-      
+
 
       <div className="bg-white min-h-screen mt-8 md:-mt-6">
         {/* --- Hero Section --- */}
@@ -153,18 +153,18 @@ const BrandingPageClient = () => {
                   BRANDING SERVICES
                 </motion.div>
                 <motion.h1
-                                variants={itemSlide}
-                                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
-                              >
-                                  <span className="block">Transform Your </span>
-                                  <span className="block">Idea into an </span>{" "}
-                                  <span className="block">Brand Identity</span>
-                              </motion.h1>
+                  variants={itemSlide}
+                  className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight sm:leading-tight lg:leading-tight"
+                >
+                  <span className="block">Transform Your </span>
+                  <span className="block">Idea into an </span>{" "}
+                  <span className="block">Brand Identity</span>
+                </motion.h1>
                 <motion.p
                   variants={itemSlide}
                   className="text-base sm:text-xl text-gray-600 max-w-xl"
                 >
-                  From logo design and brand strategy to visual identity and storytelling, Beeztech craft distinctive brand experiences that connect emotionally and perform powerfully 
+                  From logo design and brand strategy to visual identity and storytelling, Beeztech craft distinctive brand experiences that connect emotionally and perform powerfully
                 </motion.p>
                 <motion.div
                   variants={itemSlide}
@@ -279,7 +279,7 @@ const BrandingPageClient = () => {
                 We create memorable brand identities through research-driven brand strategy, logo design, and visual storytelling — ensuring your message resonates with the right audience.
               </p>
               <p className="text-gray-300 text-base md:text-xl">
-               Our team collaborates closely with you to plan and execute brand launches, refresh existing identities, and optimize brand activations for long-term recognition and growth — both online and offline.
+                Our team collaborates closely with you to plan and execute brand launches, refresh existing identities, and optimize brand activations for long-term recognition and growth — both online and offline.
               </p>
             </motion.div>
 
@@ -359,9 +359,8 @@ const BrandingPageClient = () => {
                     >
                       <span className="font-bold text-gray-900">{faq.q}</span>
                       <ChevronDown
-                        className={`w-5 h-5 transition-transform text-orange-500 ${
-                          openFaq === idx ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 transition-transform text-orange-500 ${openFaq === idx ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openFaq === idx && (

@@ -171,9 +171,7 @@
 //   );
 // }
 // app/layout.jsx
-import Navbar from "@/components/Navbar";
 import "./globals.css";
-import Footer from "@/components/Footer";
 import Script from "next/script";
 
 export const metadata = {
@@ -302,7 +300,7 @@ export default function RootLayout({ children }) {
           content="h8AVtcYpu9JM7KWRC5j7tL6dVHEFS7p8wD_Y1fArAgY"
         />
 
-         {/*  ✅ GOOGLE ANALYTICS (gtag.js) */}
+        {/*  ✅ GOOGLE ANALYTICS (gtag.js) */}
         {/* ------------------------------ */}
         <Script
           id="ga-script"
@@ -363,10 +361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 
-        {/* Global UI */}
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

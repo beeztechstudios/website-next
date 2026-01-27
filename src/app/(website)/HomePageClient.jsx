@@ -32,11 +32,11 @@
 
 'use client';
 import React, { useRef, Suspense } from 'react';
-import Portfolio from './../components/Portfolio'
-import HeroSection from '../components/HeroSection';
-import Slider from '../components/Slider';
-import ServicesSection from '../components/ServicesSectionHome';
-import AboutUsSection from '../components/AboutUsSection';
+import Portfolio from '@/components/Portfolio'
+import HeroSection from '@/components/HeroSection';
+import Slider from '@/components/Slider';
+import ServicesSection from '@/components/ServicesSectionHome';
+import AboutUsSection from '@/components/AboutUsSection';
 // import Portfoliopage from './works/work';
 
 export default function HomePageClient() {
@@ -72,7 +72,7 @@ export default function HomePageClient() {
       {/* Portfolio page inserted – will optimize once shared */}
       <Suspense fallback={<div className="h-44" />}>
         {/* <Portfoliopage /> */}
-          <Portfolio/>
+        <Portfolio />
       </Suspense>
 
     </main>

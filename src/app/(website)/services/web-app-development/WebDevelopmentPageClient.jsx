@@ -28,7 +28,7 @@ import {
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import ContactSection from "../../../components/ContactSection";
+import ContactSection from "@/components/ContactSection";
 import { a } from "framer-motion/client";
 const WebDevelopmentPage = () => {
   const [openFaq, setOpenFaq] = useState(-1);

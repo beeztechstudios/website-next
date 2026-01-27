@@ -21,7 +21,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import ContactSection from "../../../components/ContactSection";
+import ContactSection from "@/components/ContactSection";
 import Link from "next/link";
 
 const DigitalMarketingPage = () => {

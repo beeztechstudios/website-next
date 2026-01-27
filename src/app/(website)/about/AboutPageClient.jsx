@@ -40,7 +40,7 @@
 
 //   return (
 //     <>
-    
+
 //     <div className="bg-white mt-10 md:mt-0">
 //       {/* Honeycomb Background Pattern */}
 //       <div className="fixed inset-0 opacity-15 pointer-events-none">
@@ -54,7 +54,7 @@
 //       <div className="bg-white py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-16 overflow-hidden">
 //             <div className="max-w-7xl mx-auto">
 //               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                
+
 //                 {/* Left Side - Visual Elements */}
 //                 <motion.div
 //                   initial={{ opacity: 0, x: -50 }}
@@ -66,7 +66,7 @@
 //                   {/* Decorative Background Elements */}
 //                   <div className="absolute top-0 left-0 w-32 h-32 border-2 border-orange-200 rounded-3xl -z-10"></div>
 //                   <div className="absolute -top-8 -left-8 w-20 h-20 bg-orange-100 rounded-full -z-20"></div>
-                  
+
 //                   {/* Main Workspace Image */}
 //                   <motion.div
 //                     initial={{ opacity: 0, scale: 0.9 }}
@@ -80,7 +80,7 @@
 //                       alt="Modern workspace"
 //                       className="w-full h-auto"
 //                     />
-                    
+
 //                     {/* Floating Card */}
 //                     <motion.div
 //                       initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@
 //                       </div>
 //                     </motion.div>
 //                   </motion.div>
-      
+
 //                   {/* Team Member Circle - Bottom Left */}
 //                   <motion.div
 //                     initial={{ opacity: 0, scale: 0.8 }}
@@ -115,7 +115,7 @@
 //                       className="w-full h-full object-cover"
 //                     />
 //                   </motion.div>
-      
+
 //                   {/* Decorative Element - Bottom Right */}
 //                   <motion.div
 //                     initial={{ opacity: 0, rotate: -45 }}
@@ -125,7 +125,7 @@
 //                     className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-orange-200 rounded-full -z-10"
 //                   ></motion.div>
 //                 </motion.div>
-      
+
 //                 {/* Right Side - Content */}
 //                 <motion.div
 //                   initial={{ opacity: 0, x: 50 }}
@@ -145,7 +145,7 @@
 //                       ABOUT
 //                     </span>
 //                   </motion.div>
-      
+
 //                   {/* Main Heading */}
 //                   <motion.h2
 //                     initial={{ opacity: 0, y: 20 }}
@@ -156,7 +156,7 @@
 //                   >
 //                    Buzzing Ideas into Digital Reality
 //                   </motion.h2>
-      
+
 //                   {/* Subheading */}
 //                   <motion.p
 //                     initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@
 //                   >
 //                     We’re a creative tech agency turning bold ideas into powerful digital experiences that inspire, engage, and grow brands
 //                   </motion.p>
-      
+
 //                   {/* Description */}
 //                   <motion.p
 //                     initial={{ opacity: 0, y: 20 }}
@@ -176,13 +176,13 @@
 //                     transition={{ duration: 0.6, delay: 0.5 }}
 //                     className="text-base text-gray-500 leading-relaxed"
 //                   >
-                    
+
 //                     At BeezTech, we blend creativity, technology, and strategy to craft digital solutions that stand out. From startups to enterprises, our team helps transform concepts into impactful brands — through design, development, and digital innovation.
 
 
 
 //                   </motion.p>
-      
+
 //                   {/* Button */}
 //                   <motion.div
 //                     initial={{ opacity: 0, y: 20 }}
@@ -201,7 +201,7 @@
 //                     </motion.button> */}
 //                   </motion.div>
 //                 </motion.div>
-      
+
 //               </div>
 //             </div>
 //           </div>
@@ -209,7 +209,7 @@
 //       {/* Our Story Section */}
 //       <section className="relative py-0   px-4 sm:px-6 lg:px-16 bg-transparent">
 //         <div className="max-w-6xl mx-auto">
-         
+
 
 //           <motion.div
 //             initial={{ opacity: 0, y: 20 }}
@@ -229,14 +229,14 @@
 //                 </span>
 //                 .
 //               </p>
-              
+
 //               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
 //                 What started as a small initiative now evolved into a full-fledged digital studio driven by innovation, design, and purpose. At BeezTech, we believe every brand, no matter its size, deserves to stand out and thrive in the digital world.
 //               </p>
 //               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
 //                 Our name reflects our philosophy :- a hive where design, development, and strategy come together to craft something scalable, meaningful, and timeless. From branding and websites to SaaS products and digital campaigns, we help businesses create flawless, fast, and impactful online experiences.
 //               </p>
-              
+
 //               <div className="pt-4 border-l-4 border-orange-500 pl-6">
 //                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed italic">
 //                  Our mission is simple — to give every client a global presence that shines above the competition and inspires trust, creativity, and growth.
@@ -258,9 +258,9 @@
 //         <div className="absolute bottom-1/4 right-10 w-32 h-32 bg-yellow-200/20 rounded-full blur-2xl"></div>
 //       </section>
 
-      
 
-      
+
+
 //       <DesignProcessSection/>
 
 //       {/* CTA Section */}
@@ -275,8 +275,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ContactSection from "../../components/ContactSection";
-import DesignProcessSection from "../../components/DesignProcessSection";
+import ContactSection from "@/components/ContactSection";
+import DesignProcessSection from "@/components/DesignProcessSection";
 
 const AboutPageClient = () => {
   return (

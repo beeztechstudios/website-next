@@ -341,8 +341,8 @@ import {
 } from "framer-motion";
 import { ExternalLink, X } from "lucide-react";
 import Image from "next/image";
-import TestimonialsSection from "../../components/Testimonials";
-import ContactSection from "../../components/ContactSection";
+import TestimonialsSection from "@/components/Testimonials";
+import ContactSection from "@/components/ContactSection";
 
 // ---------------------------------------------------
 // ⭐ HERO SECTION (Optimized for SEO + Accessibility)
