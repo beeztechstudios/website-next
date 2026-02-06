@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
             By accessing or using our website (
             <a
               href="https://www.beeztech.studio"
-              className="text-blue-600 underline"
+              className="text-orange-500 underline"
             >
               www.beeztech.studio
             </a>
@@ -148,15 +148,15 @@ export default function PrivacyPolicy() {
             Email:{" "}
             <a
               href="mailto:hello@beeztech.studio"
-              className="text-blue-600 underline"
+              className="text-orange-500 underline"
             >
               hello@beeztech.studio
-            </a>
+            </a>  
             <br />
             Website:{" "}
             <a
               href="https://www.beeztech.studio"
-              className="text-blue-600 underline"
+              className="text-orange-500 underline"
             >
               www.beeztech.studio
             </a>

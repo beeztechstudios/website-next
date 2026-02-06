@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy-studio": "sanity deploy"
   },
   "dependencies": {
     "@microsoft/clarity": "^1.0.0",

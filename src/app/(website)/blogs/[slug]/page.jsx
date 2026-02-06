@@ -92,10 +92,7 @@ export default async function BlogDetailPage({ params }) {
     readingTime,
     date,
     image,
-    content[] {
-      ...,
-      "type": _type
-    },
+    content,
     keywords
   }`;
   const post = await client.fetch(query, { slug });
@@ -115,7 +112,7 @@ export default async function BlogDetailPage({ params }) {
       <nav className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <Link
           href="/blogs"
-          className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-orange-600 transition-colors"
+          className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-orange-500 transition-colors"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Insights
@@ -124,7 +121,7 @@ export default async function BlogDetailPage({ params }) {
 
       {/* Header Section */}
       <header className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center mb-12">
-        <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest text-orange-600 uppercase bg-orange-50 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest text-orange-500 uppercase bg-orange-50 rounded-full">
           {post.category}
         </div>
 
@@ -156,7 +153,7 @@ export default async function BlogDetailPage({ params }) {
 
       {/* Main Content Body */}
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <article className="prose prose-slate lg:prose-xl prose-headings:font-bold prose-headings:tracking-tight prose-a:text-orange-600 hover:prose-a:text-orange-500 prose-img:rounded-xl">
+        <article className="prose prose-slate lg:prose-xl prose-headings:font-bold prose-headings:tracking-tight prose-a:text-orange-500 hover:prose-a:text-orange-500 prose-img:rounded-xl max-w-none">
           <ContentRenderer content={post.content} />
         </article>
 

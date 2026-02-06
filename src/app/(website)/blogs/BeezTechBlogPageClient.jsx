@@ -60,7 +60,7 @@ const BeezTechBlogPageClient = ({ posts = [] }) => {
 
                             <Link
                                 href={`/blogs/${featuredPost.slug?.current || featuredPost.slug}`}
-                                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg"
+                                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-black text-white px-6 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg"
                             >
                                 Read Full Article
                                 <ArrowRight className="w-5 h-5" />
@@ -109,7 +109,7 @@ const BeezTechBlogPageClient = ({ posts = [] }) => {
 
                                 <Link
                                     href={`/blogs/${post.slug?.current || post.slug}`}
-                                    className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold text-sm group-hover:gap-3 transition-all"
+                                    className="inline-flex items-center gap-2 text-orange-500 hover:text-black font-semibold text-sm group-hover:gap-3 transition-all"
                                 >
                                     Read More
                                     <ArrowRight className="w-4 h-4" />
