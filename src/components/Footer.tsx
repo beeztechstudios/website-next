@@ -151,6 +151,13 @@ const Footer: React.FC = () => {
                                     Udaipur, Rajasthan, India
                                 </span>
                             </li>
+                            <li className="flex items-start gap-3 text-gray-400 text-sm">
+                                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                                <span>
+                                    
+                                    Satellite, Ahmedabad, Gujrat, India
+                                </span>
+                            </li>
                             {/* Phone Number */}
                             {/* Email Address */}
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
