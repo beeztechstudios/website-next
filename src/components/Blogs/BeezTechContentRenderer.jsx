@@ -61,7 +61,7 @@ const components = {
     ),
   },
   marks: {
-    strong: ({ children }) => <strong className="font-bold text-gray-900">{children}</strong>,
+    strong: ({ children }) => <strong className="font-bold">{children}</strong>,
     em: ({ children }) => <em className="italic">{children}</em>,
     code: ({ children }) => (
       <code className="bg-gray-100 text-orange-600 px-1.5 py-0.5 rounded font-mono text-sm">
@@ -74,7 +74,9 @@ const components = {
         <a
           href={value.href}
           rel={rel}
-          className="text-blue-600 hover:text-blue-800 underline decoration-blue-600/30 underline-offset-4 font-medium transition-colors"
+          target={!value.href.startsWith("/") ? "_blank" : undefined}
+          style={{ color: '#2563eb', textDecoration: 'underline', textDecorationColor: 'rgba(37,99,235,0.4)' }}
+          className="underline-offset-4 font-medium transition-colors hover:text-blue-800"
         >
           {children}
         </a>
@@ -144,7 +146,7 @@ const ContentRenderer = ({ content = [] }) => {
   }
 
   return (
-    <div className="portable-content font-sans antialiased">
+    <div className="portable-content font-sans antialiased [&_a]:text-blue-600 [&_a:hover]:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
       <PortableText value={content} components={components} />
     </div>
   );

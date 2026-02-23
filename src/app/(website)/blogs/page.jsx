@@ -1,3 +1,6 @@
+export const revalidate = 0;
+export const dynamic = 'force-dynamic';
+
 import React from 'react';
 import BeezTechBlogPageClient from './BeezTechBlogPageClient';
 
@@ -68,7 +71,7 @@ import { client } from '@/lib/sanity';
 import { groq } from 'next-sanity';
 
 async function getPosts() {
-  const query = groq`*[_type == "post"] | order(_id desc) {
+  const query = groq`*[_type == "post"] | order(_publishedAt desc, _createdAt desc) {
     _id,
     id,
     title,
@@ -81,12 +84,14 @@ async function getPosts() {
     author,
     keywords,
     meta,
+    _publishedAt,
+    _createdAt,
     content[] {
       ...,
       "type": _type
     }
   }`;
-  return client.fetch(query, {}, { next: { revalidate: 60 } });
+  return client.fetch(query, {}, { next: { revalidate: 0 } });
 }
 
 export default async function BeezTechBlogPage() {

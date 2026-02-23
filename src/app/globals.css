@@ -30,3 +30,16 @@ body {
   overflow-x: hidden !important;
 }
 
+/* Blog content: always render links in blue regardless of surrounding marks */
+.portable-content a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(37, 99, 235, 0.4) !important;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.portable-content a:hover {
+  color: #1d4ed8 !important;
+}
+

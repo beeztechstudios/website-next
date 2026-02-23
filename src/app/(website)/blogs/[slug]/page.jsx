@@ -1,3 +1,6 @@
+export const revalidate = 0;
+export const dynamic = 'force-dynamic';
+
 import { ArrowLeft, Clock } from 'lucide-react';
 import ContentRenderer from '@/components/Blogs/BeezTechContentRenderer';
 import { client, urlFor } from '@/lib/sanity';
@@ -14,7 +17,7 @@ async function getRelatedPosts(currentPostId, currentCategory) {
     readingTime,
     image
   }`;
-  return client.fetch(query, { currentPostId, currentCategory });
+  return client.fetch(query, { currentPostId, currentCategory }, { next: { revalidate: 0 } });
 }
 
 // Generate static params for all blog posts
@@ -36,7 +39,7 @@ export async function generateMetadata({ params }) {
     meta,
     image
   }`;
-  const post = await client.fetch(query, { slug });
+  const post = await client.fetch(query, { slug }, { next: { revalidate: 0 } });
 
   if (!post) {
     return {
@@ -95,7 +98,7 @@ export default async function BlogDetailPage({ params }) {
     content,
     keywords
   }`;
-  const post = await client.fetch(query, { slug });
+  const post = await client.fetch(query, { slug }, { next: { revalidate: 0 } });
 
   if (!post)
     return (
@@ -109,7 +112,7 @@ export default async function BlogDetailPage({ params }) {
   return (
     <div className="bg-white min-h-screen font-sans antialiased text-gray-900">
       {/* Navigation / Back Button */}
-      <nav className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <nav className="pt-24 pb-6 px-4 sm:px-6 max-w-4xl mx-auto">
         <Link
           href="/blogs"
           className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-orange-500 transition-colors"
@@ -120,20 +123,20 @@ export default async function BlogDetailPage({ params }) {
       </nav>
 
       {/* Header Section */}
-      <header className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center mb-12">
-        <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest text-orange-500 uppercase bg-orange-50 rounded-full">
+      <header className="px-4 sm:px-6 max-w-4xl mx-auto text-center mb-10">
+        <div className="inline-block px-3 py-1 mb-5 text-xs font-semibold tracking-widest text-orange-500 uppercase bg-orange-50 rounded-full">
           {post.category}
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-[1.15] mb-8">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-[1.15] mb-6">
           {post.title}
         </h1>
 
-        <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 border-y border-gray-100 py-4">
+        <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-500 border-y border-gray-100 py-4">
           <span className="font-medium text-gray-900">{post.author}</span>
           <span className="text-gray-300">•</span>
-          <span className="flex items-center">
-            <Clock className="w-4 h-4 mr-1" /> {post.readingTime}
+          <span className="flex items-center gap-1">
+            <Clock className="w-4 h-4" /> {post.readingTime}
           </span>
           <span className="text-gray-300">•</span>
           <span>{post.date}</span>
@@ -141,19 +144,19 @@ export default async function BlogDetailPage({ params }) {
       </header>
 
       {/* Hero Image */}
-      <div className="max-w-5xl mx-auto px-4 mb-16">
-        <div className="aspect-1200/630 relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-16">
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-gray-200" style={{paddingBottom: '52.5%'}}>
           <img
-            src={post.image?.asset ? urlFor(post.image).url() : post.image}
+            src={post.image?.asset ? urlFor(post.image).width(1200).url() : post.image}
             alt={post.title}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
       </div>
 
       {/* Main Content Body */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <article className="prose prose-slate lg:prose-xl prose-headings:font-bold prose-headings:tracking-tight prose-a:text-orange-500 hover:prose-a:text-orange-500 prose-img:rounded-xl max-w-none">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 pb-20">
+        <article className="prose prose-slate lg:prose-lg prose-headings:font-bold prose-headings:tracking-tight prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 prose-strong:text-gray-900 prose-img:rounded-xl max-w-none">
           <ContentRenderer content={post.content} />
         </article>
 
