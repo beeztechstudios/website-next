@@ -265,24 +265,6 @@ interface PortfolioCardProps {
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: 'TARAKSH',
-    category: 'Brand Identity',
-    image:
-      'https://res.cloudinary.com/dwz07ormq/image/upload/f_auto,q_auto,w_450/v1761583136/taraksh_yoxxzb.jpg',
-    challenge:
-      'TARAKSH, an international law firm operating in Dubai and India, wanted a timeless brand identity that reflected excellence and deep-rooted spiritual values.',
-    solution:
-      'We created a brand identity inspired by Tara Mata Devi — blending purity, balance, and justice into a unified visual system with modern digital presence.',
-    results: [
-      'Meaningful brand aligned with firm’s values',
-      'Consistent identity across digital & print',
-      'High client appreciation & stronger brand perception',
-    ],
-    techStack: ['Illustrator', 'Photoshop', 'Figma'],
-  },
-
-  {
-    id: 2,
     title: 'HiLe',
     category: 'Brand Identity & Development',
     image:
@@ -300,7 +282,7 @@ const portfolioItems: PortfolioItem[] = [
   },
 
   {
-    id: 3,
+    id: 2,
     title: 'Merchant Xporters',
     category: 'Brand Identity & Web Development',
     image:
@@ -318,7 +300,7 @@ const portfolioItems: PortfolioItem[] = [
   },
 
   {
-    id: 4,
+    id: 3,
     title: 'Alliedge Healthcare',
     category: 'Brand Identity & Web Design',
     image:
