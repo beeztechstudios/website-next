@@ -1,78 +1,235 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>https://www.beeztech.studio/</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>1.00</priority>
+  <loc>https://www.beeztech.studio/</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/works</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/works</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/about</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/about</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/blogs</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/blogs</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/book-call</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/book-call</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/services/web-app-development</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/services/web-app-development</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/services/branding</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/services/branding</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/services/digital-marketing</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/services/digital-marketing</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/services/media-production</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/services/media-production</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/services</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/services</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/privacy-policy</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.beeztech.studio/privacy-policy</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/blogs/mvp-product-market-fit</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.beeztech.studio/blogs/information-vs-advertisement-crafting-a-legal-digital-footprint-that-respects-professional</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/blogs/mern-vs-firebase-saas-development</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.beeztech.studio/blogs/navigating-bar-council-rule-36-how-to-build-a-fully-compliant-law-firm-website-without-crossing</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/blogs/figma-sketch-ui-ux</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.beeztech.studio/blogs/the-human-advantage-in-answer-engine-optimization-why-ai-search-still-needs-genuine-e-e-a-t</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://www.beeztech.studio/blogs/recurring-tech-support-model</loc>
-<lastmod>2025-11-14T16:10:29+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.beeztech.studio/blogs/saas-development-company-india-agentic-ai-for-b2b-partnerships-2026</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/video-production-company-india-using-generative-ai-for-brand-stories</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/mobile-app-development-india-edge-ai-security-in-rajasthan-innovations</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/web-development-company-india-adopting-ai-first-trends-for-2026-growth</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/logo-design-company-india-integrating-ai-for-immersive-brand-experiences</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/social-media-marketing-enhanced-by-generative-ai-in-the-rajasthan-market</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/the-rise-fall-and-reinvention-of-nokia-a-strategic-branding-and-technology-case-study</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/the-future-of-visibility-ai-driven-seo-services-in-india-for-rajasthan-s-growing-economy</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/revolutionizing-branding-agency-india-with-ai-agents-in-2026-trends</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/media-production-mastery-creating-compelling-content-for-brand-storytelling</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/saas-development-blueprint-launching-scalable-platforms-in-2026</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/5-ways-google-antigravity-outshines-n8n-for-no-code-automation-in-digital-agencies</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/moltbot-review-2026-the-self-hosted-ai-agent-that-s-changing-personal-automation-in-india</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/branding-in-2026-crafting-memorable-identities-amid-digital-noise</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/unlocking-brand-experience-immersive-strategies-for-lasting-customer-loyalty</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/the-hidden-engine-why-successful-ai-marketing-depends-on-modern-web-development</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/build-high-converting-landing-pages-10x-faster-claude-cli-gemini-lovable-vs-old-school-coding-in</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/no-code-platforms-vs-traditional-coding-wix-framer-webflow-and-the-future-of-web-development-in</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/2026-web-development-trends-building-resilient-sites-for-indian-businesses</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/google-antigravity-review-features-vs-cursor-and-windsurf-and-why-it-s-revolutionizing-web</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/the-2026-developer-workflow-stack-of-ai-tools-to-smoothen-coding-testing-and-deployment</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/web-dev-decoded-ai-vs-frontend-vs-backend-for-business-growth</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/blogs/the-complete-brand-strategy-framework-for-udaipur-businesses-from-the-4-c-s-to-ai-tools</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/services/web-app-development?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/services/media-production?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/services/branding?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/services/digital-marketing?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/services?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.beeztech.studio/book-call?referrer=grok.com</loc>
+  <lastmod>2026-06-24T05:06:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
 </urlset>
